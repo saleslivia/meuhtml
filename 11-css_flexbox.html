@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CSS</title>
+</head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <br>
+        <h1 class="titleSecond"> CSS - Cascading Style Sheets </h1><br>
+        <div>
+            <img class="imgHome" src="img/css.jpg" alt="css">            
+        </div>
+        <div class="conteudo2">
+            <p>
+                <h3>- Flexbox</h3>
+                Flexbox, ou Flexible Box Layout, é um modo de layout em CSS3, projetado para criar layouts para aplicações complexas e páginas web. O Flexbox é flexível distribuindo espaço e alinhando conteúdo em formas que aplicações web e páginas web complexas geralmente precisam. Ele tem por objetivo organizar itens dentro de um elemento pai, normalmente chamado de container. <br> Na Origamid você encontra um <a class="link2" href="https://origamid.com/projetos/flexbox-guia-completo/" target="blank">artigo</a> detalhando cada propriedade e um <a class="link2" href="https://www.origamid.com/curso/css-flexbox/" target="blank">curso</a> explicativo sobre todo o Flaxobx
+                <figure class="figureImg">
+                    <img src="img/css-flexbox-2.png" alt="css-flexbox">
+                    <figcaption class="refImg">Fonte: <a class="refImg" href="https://origamid.com/projetos/flexbox-guia-completo/" target="blank">Origamid</a></figcaption>
+                </figure>
+                <h4>Display Flex</h4>
+                Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.
+                <div class="codigo2">
+    <pre>
+        .container {
+            display: flex;
+            flex: 1;
+        }
+    </pre>
+                </div>
+                <h4>flex-direction</h4>
+                Define a direção dos flex itens. Por padrão ele é row (linha), por isso quando o display: flex; é adicionado, os elementos ficam em linha, um do lado do outro. A mudança de row para column geralmente acontece quando estamos definindo os estilos em media queries para o mobile.
+                <div class="codigo2">
+    <pre>
+        .container {
+            display: flex;
+            flex-direction: row; /*itens em forma de linha*/
+            flex-direction: row-reverse; /*resultado é apresentado ao contrário*/
+            flex-direction: column;/*itens em forma de coluna*/
+            flex-direction: column-reverse;
+        }
+    </pre>
+                </div>
+                <h4>flex-wrap</h4>
+                Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha. Essa é geralmente uma propriedade que é quase sempre definida como flex-wrap: wrap; 
+                <div class="codigo2">
+    <pre>
+        .container {
+            display: flex; 
+            flex-wrap: nowrap; /*todos os itens serão dispostos em uma linha*/
+            flex-wrap: wrap; /*ocorrerá a quebra de linha*/
+            flex-wrap: wrap-reverse; /*ocorrerá a quebra de linha e os itens mais à direita serão deslocados para a linha de cima*/
+        }
+    </pre>
+                </div>
+                <h4>flex-flow</h4>
+                O flex-flow é um atalho para as propriedades flex-direction e flex-wrap (forma abreviada). 
+                <div class="codigo2">
+    <pre>
+        .row-wrap {
+            flex-flow: row wrap;
+            flex-flow: row nowrap;
+            flex-flow: column nowrap;
+        }
+    </pre>
+                </div>
+                <h4>justify-content</h4>
+                Define o alinhamento do flex-item ao longo do eixo principal. Por padrão o valor é o <span class="destaque">flex-start</span>, mas pode assumir também os valores <span class="destaque">flex-end</span>, que alinha a partir do eixo principal, <span class="destaque">center</span>, <span class="destaque">space-araund</span>, onde ele vai respeitar a margem que foi atribuída para o flex-item, distribuindo uniformemente a margem que foi aplicada, <span class="destaque">space-araund</span>, que desconsidera a margem do primeiro e último flex-item, distribuindo o valor dos demais itens.
+                <div class="codigo2">
+    <pre>
+        .container {
+            display: flex;
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+        }
+    </pre>
+                </div>
+                <figure class="figureImg">
+                    <img src="img/css-flexbox.png" alt="css-flexbox">
+                    <figcaption class="refImg">Fonte: https://www.devmedia.com.br/css3-flexbox-funcionamento-e-propriedades/29532</figcaption>
+                </figure>
+                <h4>flex-grow</h4>
+                Define a habilidade de um flex item crescer. Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width definido (é definido no elemento atual e, tudo que vem após este elemento, é empurrado para o final do box). 
+                <div class="codigo2">
+    <pre>
+        .grow1 {
+            flex-grow: 1;
+        }
+    </pre>
+                </div>
+                <h4>flex-shrink</h4>
+                Define a habilidade de um flex item encolher caso seja necessário. Por padrão o valor é zero (é definido no elemento atual e, tudo que vem após este elemento, é empurrado para o final do box). 
+                <div class="codigo2">
+    <pre>
+        .item2 {
+            flex-shrink: [número]
+          }
+    </pre>
+                </div>
+                <h4>flex-basis</h4>
+                Indica o tamanho inicial do flex item antes da distribuição do espaço restante para os demais itens.
+                Quando definimos o flex-grow: 1; e possuímos auto no basis, o valor restante para ocupar o container é distribuído ao redor do conteúdo do flex-item. 
+                <div class="codigo2">
+    <pre>
+        .basis-auto {
+            flex-grow: 1;
+            flex-basis: auto;
+            flex-basis: 45%;
+        } 
+    </pre>
+                </div>
+                <h4>flex</h4>
+                é uma forma abreviada para a escrita das propriedades <span class="destaque">flex-grow</span>, <span class="destaque">flex-shrink</span> e <span class="destaque">flex-basis</span>, nesta ordem. 
+                <div class="codigo2">
+    <pre>
+        .item2 {
+            flex: [flex-grow] [flex-shrink] [flex-basis]
+          }
+    </pre>
+                </div>
+                <h4>Usando responsividade</h4>
+                A responsividade é usada para que a navegação aconteça da mesma forma em diversos dispositivos. <br>
+                Design Responsivo é uma técnica de estruturação HTML e CSS, em que o site se adapta ao browser do usuário sem precisar definir diversas folhas de estilos para cada resolução. Para isso usamos as media queries do CSS (aplica estilos de acordo com a largura do browser).
+                <div class="codigo2">
+    <pre>
+        @media (max-width: 727px){
+            .card{
+                flex-basis:100%;
+                margin: 15px 0;
+            }
+        }
+    </pre>
+    <pre>
+        ----------------------------------------------------------------------------------------------------
+
+        .basis-auto {
+            @media (min-width: 400px) and (max-width: 800px) {
+                p {
+                    color: blue;
+                }
+                div {
+                    background: red;
+                }
+            }
+    </pre>
+                </div>
+                O código CSS acima (.basis-auto) será apenas aplicado quando a tela tiver entre 400px e 800px de largura.
+            </p>
+        </div>  
+    </div>
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>

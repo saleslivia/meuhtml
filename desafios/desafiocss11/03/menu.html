@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemplo menu responsivo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+			var pull 		= $('#menu');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+	</script>
+</head>
+<body>
+	<nav class="menu-nav">
+		<ul class="menu-nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Que Somos</a></li>
+			<li><a href="#">Clientes</a></li>
+			<li><a href="#">Missão</a></li>
+			<li><a href="#">Produtos</a></li>
+			<li><a href="#">Contato</a></li>	
+		</ul>
+		<a href="#" id="menu">Menu</a>
+	</nav>
+</body>
+</html>

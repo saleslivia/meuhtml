@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Trabalhando com Fomulários</title>
+</head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <br>
+        <h1 class="titleSecond">Trabalhando com Fomulários</h1><br>
+        <div>
+            <img class="imgHome" src="img/formularios.png" alt="formulario">            
+        </div>
+        <div class="conteudo">
+            <h3>- Formulários -</h3>
+            <p>
+               Formulários são meios usados para a interação do usuário com um site. Eles permitem que os usuário envie seus dados para uma página. <br>
+               Para criar um formulário utilizamos a TAG <code class="destaque">&lt;form&gt;</code>.
+               Outros elementos que vamos utilizar são:
+               <ul>
+                   <li><em class="destaque">Label:</em> É um rótulo para o input.</li>
+                   <li><em class="destaque">Input:</em> É uma caixa onde podemos informar diferentes dados. Ele precisa vir acompanhado de uma informação sobre o que deve ser digitado nele.
+                        <ul>
+                            <li><strong>type:</strong>
+                                <ul>
+                                    <li>text</li>
+                                    <li>email</li>
+                                    <li>password</li>
+                                    <li>date</li>
+                                    <li>number: min="" ou max=""</li>
+                                    <li>radio: value="", label, name="" (definir valores do mesmo grupo), e checked (define valor padrão)</li>
+                                    <li>month</li>
+                                    <li>range</li>
+                                    <li>search</li>
+                                    <li>file: Com o atributo <span class="destaque">accept</span>, é possível definir os tipo de arquivos permitidos.</li>
+                                    <li>image</li>
+                                    <li>checkbox: pode ser usado com o <span class="destaque">checked</span>, para já vir marcado.</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </li>
+                            <li><strong>placeholder:</strong> Apelido ou dica para o campo.</li>
+                            <li><strong>name:</strong> É o campo usado pelo servidor para identificar de onde está recebendo a informação.</li>
+                        </ul>
+                    </li>
+                    <li><em class="destaque">Select:</em> cria uma caixa de seleção. Utilizamos o elemento <span class="destaque">option</span> + <span class="destaque">value=""</span>. </li>
+                   <li><em class="destaque">Textarea:</em> Permite inserir mais de uma linha de texto no formulário.
+                        <ul>
+                            <li>maxlength="": máximo de caracteres permitido no campo.</li>
+                            <li>minlength="": mínimo de caracteres permitido no campo.</li>
+                            <li>name=""</li>
+                            <li>id=""</li>
+                            <li>cols="30"</li>
+                            <li>rows="10"</li>
+                        </ul>
+                    </li>
+                   <li><em class="destaque">Button:</em> podemos criar um botão usando o Input com o atrubito <span class="destaque">submit</span> ou o button, com o atributo <span class="destaque">submit</span>:
+                        <ul>
+                            <li>submit: envia os dados do formulário para a página de web definida pelo atributo action do elemento <code class="destaque">&lt;form&gt;</code></li>
+                            <li>reset: redefine imediatamente todos os campos do formulário para o seu valor padrão.</li>
+                            <li>button: ele pode assumir qualquer comportamento através linguagem JavaScript, por exemplo.</li>
+                            <li>fieldset: Agrupa elementos dentro de um campo. É usado junto com o atributo legend.</li>
+                        </ul>
+                    </li>
+                    <li><em class="destaque">Required:</em> Torna o campo com este atrubito de preenchimento obrigatório.</li>
+               </ul>
+               Utilizamos também os atributos:
+               <ul>
+                   <li><em class="destaque">Action:</em> define o endereço (uma URL) para o qual os dados recolhidos do formulário devem ser enviados.</li>
+                   <li><em class="destaque">Method:</em> define qual o método HTTP para enviar os dados (ele pode ser:
+                    <ul>
+                        <li><span class="destaque">"GET":</span> Envia os dados do formulário através da URL, deixando-os visíveis no endereço da requisição, como acontece na busca do Google.</li>
+                        <li><span class="destaque">"POST":</span> Envia os dados em um bloco separado da URL, sendo considerado mais seguro por isso. Normalmente é usado para enviar dados sensíveis, como a senha de um usuário, por exemplo.</li>
+                    </ul></li>
+                   
+               </ul> 
+            </p>
+            <p>
+                Exemplo de formulário: <br>
+                <form action="http://arquivo.devmedia.com.br/projeto/requisicao.php" method="GET">
+                    <fieldset>
+                        <legend>Conta</legend>
+                        <div>
+                            <label>E-mail:</label>
+                            <input type="email" placeholder="email@email.com.br" name="contaEmail" required minlength="10" maxlength="100">
+                        </div>
+                        <div>
+                            <label>Senha:</label>
+                            <input type="password" name="contaSenha">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+                        <div>
+                            <label>Nome:</label>
+                            <input type="text" placeholder="Ex: Lívia Sales" name="dadosNome">
+                        </div>
+                        <div>
+                            <label>Telefone:</label>
+                            <input type="text" placeholder="99 999999999" pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}" name="dadosTelefone">
+                        </div>
+                        <div>
+                            <label>Sexo:</label>
+                            <input type="radio" value="masculino" name="sexo" id="masculino" checked>
+                            <label for="masculino">Masculino</Label>
+                            <input type="radio" value="feminino" name="sexo" id="feminino">
+                            <label for="feminino">Feminino</label>
+                        </div>
+                        <div>
+                            <label>Data de Nascimento:</label>
+                            <input type="date" name="dadosDataNascimento">
+                        </div>
+                        <div>
+                            <label>Foto de Perfil</label>
+                            <input type="file" accept="image/*" name="dadosFoto">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <div>
+                            <label>Rua:</label>
+                            <input type="text" placeholder="Rua dos Timbiras" name="enderecoRua">
+                        </div>
+                        <div>
+                            <label>Complemento:</label>
+                            <input type="text" placeholder="6º andar" name="enderecoComplemento">
+                        </div>
+                        <div>
+                            <label>Número:</label>
+                            <input type="number" min="0" max="999" placeholder="111" name="enderecoNumero">
+                        </div>
+                        <div>
+                            <label>Cidade:</label>
+                            <input type="text" placeholder="Belo Horizonte" name="enderecoCidade">
+                        </div>
+                        <div>
+                            <label>Estado:</label>
+                            <select name="enderecoEstado">
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="BA">Bahia</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Anúncio</legend>
+                        <div>
+                            <label>Como você conheceu a DevMedia</label>
+                            <textarea maxlength="256" placeholder="Explique como você chegou aqui..." name="comoChegouAqui"></textarea>
+                        </div>
+                        <div>
+                            <input type="checkbox" checked name="receberAnuncio" id="receberAnuncio">
+                            <label for="receberAnuncio">Deseja receber ofertas por e-mail?</label>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="EnviarInput" name="enviar">
+                    <button type="submit" name="enviar">EnviarButton</button>
+                </form>
+            </p>
+            <br>
+            <div class="codigo">
+    <pre>
+        &lt;form action="" method="GET"&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;Conta&lt;/legend&gt;
+                &lt;div&gt;
+                    &lt;label&gt;E-mail:&lt;/label&gt;
+                    &lt;input type="email" placeholder="email@email.com.br" name="contaEmail" required minlength="10" maxlength="100"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label>Senha:&lt;/label&gt;
+                    &lt;input type="password" name="contaSenha"&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+                &lt;legend>Dados Pessoais&lt;/legend&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Nome:&lt;/label>
+                    &lt;input type="text" placeholder="Ex: Lívia Sales" name="dadosNome"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Sexo:&lt;/label&gt;
+                    &lt;input type="radio" value="masculino" name="sexo" checked&gt;
+                    &lt;label&gt;Masculino&lt;/Label&gt;
+                    &lt;input type="radio" value="feminino" name="sexo"&gt;
+                    &lt;label&gt;Feminino&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Data de Nascimento:&lt;/label&gt;
+                    &lt;input type="date" name="dadosDataNascimento"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Foto de Perfil&lt;/label&gt;
+                    &lt;input type="file" accept="image/*" name="dadosFoto"&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;Endereço&lt;/legend>
+                &lt;div&gt;
+                    &lt;label&gt;Número:</label>
+                    &lt;input type="number" min="0" max="999" placeholder="111" name="enderecoNumero"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Estado:</label>
+                    &lt;select name="enderecoEstado"&gt;
+                        &lt;option value="RJ">Rio de Janeiro&lt;/option&gt;
+                        &lt;option value="SP">São Paulo&lt;/option&gt;
+                        &lt;option value="MG">Minas Gerais&lt;/option&gt;
+                        &lt;option value="BA">Bahia&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+                &lt;legend>Anúncio&lt;/legend&gt;
+                &lt;div&gt;
+                    &lt;label&gt;Como você conheceu a DevMedia&lt;/label&gt;
+                    &lt;textarea maxlength="256" placeholder="Explique como você chegou aqui..." name="comoChegouAqui"&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;input type="checkbox" checked name="receberAnuncio"&gt;
+                    &lt;label&gt;Deseja receber ofertas por e-mail?&lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;input type="submit" value="EnviarInput" name="enviar"&gt;
+            &lt;button type="submit" name="enviar"&gt;EnviarButton&lt;/button&gt;
+        &lt;/form&gt;
+    </pre>
+            </div>
+            <br>
+            <p>
+                <h3>Expressões Regulares - RegEx</h3>
+                Expressões regulares é uma linguagem, onde é usado um conjunto de caracteres e cada caracter tem um significado especial. Ela nos permite criar padrões de verificação de string, como por exemplo, se o usuário informou o telefone no modelo que queremos. <br>
+                Para isso, usamo como atributo da TAG <code class="destaque">&lt;input&gt;</code>, o <span class="destaque">pattern</span>. <br>
+                As expressões regulares buscam em textos através de um <span class="destaque">Regex Engine</span> (motor) disponível em linguagens como HTML, PHP, JavaScript e etc. Informamos um padrão que queremos que o Regex encontre, passando um alvo (bloco de texto) para que ele valide, extraia ou busque em um texto. <br>
+                No site <a class="link" href="https://regex101.com/" target="_blank">Regex101</a> é possível testar expressões regulares das principais linguagens.
+
+                 <br><br>
+                <div class="codigo">
+    <pre>
+        &lt;input type="text" placeholder="Ex: (99) 99999-9999" pattern="\([0-9]{2}\)[\s][0-9]{5}-[0-9]{4}" name="dadosTelefone"&gt;
+    </pre>
+
+                </div>
+            </p>
+        </div>  
+    </div>
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>
+

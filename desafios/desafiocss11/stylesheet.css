@@ -1,0 +1,127 @@
+/* INICIO REGRAS CSS INTERNO */
+.voltarImg{
+    vertical-align: middle;
+    width: 15px;
+    margin-right: 5px;
+}
+.voltarLink{
+    text-decoration: none;
+    vertical-align: middle;
+    color: #000;
+    font-family: 'Tenor Sans', sans-serif;
+}
+.voltarLink:hover{
+    text-decoration: none;
+    vertical-align: middle;
+    color: #000;
+    font-family: 'Tenor Sans', sans-serif;
+    font-weight: bolder
+}
+h1.index{
+    color: #aabad6;
+    font: bolder 20pt;
+    font-family: 'New Tegomin', serif;
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: center;
+    background-color: #05183b;
+    box-shadow: 15px 8px 15px grey;
+    padding: 15px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+.link2{
+    text-align: center;
+    text-decoration: none;
+    color: #2a2a2b;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 18px;
+    list-style: circle;
+}
+.link2:hover{
+    text-decoration: none;
+    color: #ce420a;
+    font-size: 20PX;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+/* FIM REGRAS CSS INTERNO */
+
+/* INICIO REGRAS CSS COMUNS À TODOS OS DISPOSITIVOS */
+.titulo {
+    margin: 20px 0 80px;
+    text-align: center;
+  }
+  
+  .conteudo-dispositivo {
+    display: none;
+    text-align: center;
+  }
+  /* FIM REGRAS CSS COMUNS À TODOS OS DISPOSITIVOS */
+  /* INICIO REGRAS CSS REFERENTES À PRIMEIRA VERSÃO */
+@media only screen and (max-width: 480px) {
+
+    body {
+        background-color: #D46A6A;
+        color: #FFF;
+    }
+  
+    .conteudo-dispositivo.pequeno {
+        display: block;
+    }
+  
+  }
+  /* INICIO REGRAS CSS REFERENTES À SEGUNDA VERSÃO */
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+  
+    body {
+        background-color: #758AA8;
+        color: #FFF;
+    }
+  
+    .conteudo-dispositivo.medio {
+        display: block;
+    }
+  
+  }
+  /* INICIO REGRAS CSS REFERENTES À TERCEIRA VERSÃO */
+  @media only screen and (min-width: 1025px) {
+  
+    body {
+        background-color: #D4CE6A;
+        color: #000;
+    }
+  
+    .conteudo-dispositivo.grande {
+        display: block;
+    }
+  
+  }
+  /* INICIO REGRAS CSS REFERENTES À QUARTA VERSÃO */
+  @media print {
+  
+    .titulo {
+        margin: 0 0 50px;
+        text-align: left;
+    }
+  
+    .conteudo-dispositivo {
+        text-align: left;
+    }
+  
+    body {
+        background-color: #FFF;
+        color: #000;
+    }
+  
+    .conteudo-dispositivo.impressao {
+        display: block;
+    }
+  
+  }

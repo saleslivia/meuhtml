@@ -1,0 +1,150 @@
+.homePrimary{
+   /*background-color: #1a1a1b;*/
+   background-image: url("tec10.jpg");
+   background-size: 110% 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+.homeSecond{
+  background-color: #f1f4f5d3;
+}
+.header{
+  background-color: #ffffffe3;
+  width: 70%;
+  display: block;
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 25px;
+}
+h1.tituloPrimary{
+  color: #aabad6;
+  font: bolder 20pt;
+  font-family: 'New Tegomin', serif;
+  font-family: 'Tenor Sans', sans-serif;
+  text-align: center;
+  background-color: #05183b;
+  box-shadow: 20px 10px 10px grey;
+  padding: 15px;
+}
+h1.tituloSecond{
+  color: #124296;
+  font: bold 20pt;
+  font-family: 'New Tegomin', serif;
+  font-family: 'Tenor Sans', sans-serif;
+  text-align: center;
+  background-color: #aec2e4e7;
+  box-shadow: 20px 10px 10px grey;
+  padding: 15px;
+  border-radius: 10px;
+}
+.menu, .modulo, .exercicio, .desafio, .extra, .seliga{
+  list-style-type: none;
+  font: bolder 16px;
+  font-size: large;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'New Tegomin', serif;
+  font-family: 'Tenor Sans', sans-serif;
+}
+.modulo:hover, .exercicio:hover, .desafio:hover, .extra:hover, .seliga:hover{
+  list-style-type: none;
+  font: bolder 20pt;  
+  font-family: 'New Tegomin', serif;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: x-large;
+  padding: 10px;
+  color: #800505;
+}
+.subMenu{
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: normal 14px Arial;
+  padding-left: 20px;
+  margin: auto;
+  color: #2d3147;
+}
+.subMenu:hover{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: italic 16px Arial;
+  padding-left: 20px;
+  margin: auto;
+  color: darkblue;
+}
+.listSocialMedia{
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+/*----------INÍCIO PÁGINAS INTERNAS----------------*/
+.container{
+  background-color: #dedee4ec;
+}
+.imgHome{
+  display: block; /*Centralizar a imagem*/
+  margin-left: auto;/*Centralizar a imagem*/
+  margin-right: auto;/*Centralizar a imagem*/
+  width: 300px;
+  right: 250px;
+}
+.conteudo{
+  background-color: #1b1b1dec;
+  padding: 10px;
+  margin: 20px;
+  border: solid 1px #9e9898;
+  height: auto;
+  color: #fff;
+  font-family: 'Inconsolata', monospace;
+  text-decoration: none;
+}
+.refImg{
+  font: 8pt Arial;
+  color: #7a7a7a;
+}
+.codigo{
+  background-color: #fff;
+  color: #000;
+  padding-top: 5px;
+  width: 700px;
+}
+.lista{
+  list-style-type: disc;
+}
+.subLista{
+  list-style-type: circle;
+}
+h3, h2{
+  color: #6086c9;
+}
+.voltar{
+  text-decoration: none;
+  vertical-align: middle;
+}
+span{
+  color: aquamarine; 
+  font-size: medium;
+}
+
+/*----------FIM PÁGINAS INTERNAS----------------*/
+
+footer{
+  background-color: #b3b3c4ef;
+  color: #5959ac;
+  text-align: center;
+  padding-top: 1px;
+  margin-bottom: 0%;
+
+}
+.copy{
+  padding-top: 6px;
+  color: #fff;
+  font-size: small;
+}

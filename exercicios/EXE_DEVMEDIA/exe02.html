@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Pizza</title>
+    <style>
+        .voltarImg{
+            vertical-align: middle;
+            width: 15px;
+            margin-right: 5px;
+            }
+        .voltarLink{
+            text-decoration: none;
+            vertical-align: middle;
+            color: #000;
+            font-family: 'Tenor Sans', sans-serif;
+            }
+    </style>
+</head>
+<body>
+    <a class="voltarLink" href="../../index.html"><img class="voltarImg" src="../../img/voltar2.png" alt="voltar">Home</a>
+    <h1 style="text-align: center;">Crie sua conta do Hello Pizza</h1>
+    <br>
+
+    <div>
+        <form action="http://arquivo.devmedia.com.br/projeto/requisicao.php" method="POST">
+            <fieldset>
+                <legend>Conta</legend>
+                <div>
+                    <label>E-mail:</label>
+                    <input type="email" name="contaEmail" placeholder="seuemail@email.com.br" required minlength="5" maxlength="100">
+                </div>
+                <div>
+                    <label>Senha:</label>
+                    <input type="password" name="contaSenha">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Pessoal</legend>
+                <div>
+                    <label>Name:</label>
+                    <input type="text" name="pessoalNome" placeholder="Nome Sobrenome">
+                </div>
+                <div>
+                    <label>Telefone:</label>
+                    <input type="text" name="pessoalTelefone" placeholder="(99) 99999-9999" pattern="\([0-9]{2}\){\s}[0-9]{5}-[0-9]{4}">
+                </div>
+                <div>
+                    <label>Sexo:</label>
+                    <input type="radio" name="sexo" value="masculino" checked>
+                    <label>Masculino</label>
+                    <input type="radio" name="sexo" value="feminino">
+                    <label>Feminino</label>
+                </div>
+                <div>
+                    <label>Data de Nascimento:</label>
+                    <input type="date" name="pessoalDataNascimento">
+                </div>
+                <div>
+                    <label>Foto Perfil:</label>
+                    <input type="file" name="pessoalFoto" accept="image/*">
+                </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <div>
+                        <label>Rua:</label> 
+                        <input type="text" name="enderecoRua" placeholder="Rua dos Josés">
+                    </div>
+                    <div>
+                        <label>Número:</label>
+                        <input type="text" name="enderecoNumero" min="0" max="999" placeholder="111">
+                    </div>
+                    <div>
+                        <label>Complemento:</label>
+                        <input type="text" name="enderecoComplemento" placeholder="casa 1">
+                    </div>
+                    <div>
+                        <label>Cidade:</label>
+                        <input type="text" name="enrecoCidade">
+                    </div>
+                    <div>
+                        <label>Estado:</label>
+                        <select name="enderecoEstado">
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="BA">Bahia</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Anúcio</legend>
+                    <div>
+                        <label>Como conheceu a Hello Pizza?</label>
+                        <textarea name="anuncioComoConheceu" maxlength="256" placeholder="Como você conheceu a Hello Pizza?"></textarea>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="anuncioAutorizazao" checked>
+                        <label>Desejo receber ofertas por e-mail.</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <button type="submit" name="enviar">Finalizar Cadastro</button>
+                </div>
+        </form>
+
+    </div>
+    <hr>
+    <a class="voltarLink" href="../../index.html"><img class="voltarImg" src="../../img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>

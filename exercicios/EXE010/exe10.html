@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Curso em Vídeo</title>
+    <style>
+        .voltarImg{
+            vertical-align: middle;
+            width: 15px;
+            margin-right: 5px;
+            }
+        .voltarLink{
+            text-decoration: none;
+            vertical-align: middle;
+            color: #000;
+            font-family: 'Tenor Sans', sans-serif;
+            }
+    </style>
+</head>
+<body>
+    <a class="voltarLink" href="../../index.html"><img class="voltarImg" src="../../img/voltar2.png" alt="voltar">Home</a>
+    <h2>INSERINDO LINKS</h2>
+    <hr>
+    <li>Para inserir um <strong>Link</strong> usamos a TAG <strong>&lt;a&gt;</strong>. Podemos usar outros parâmetros como:
+        <ul class="sublista">
+            <li>Target: Indica qual a maneira que o site será aberto.
+                <ul>
+                    <li>Blank: Nova aba do navegador</li>
+                    <li>Self: Mesma aba do site atual (padrão).</li>
+                </ul>
+            </li>
+            <li>Rel: qual a natureza do link:
+                <ul class="sublista">
+                    <li>next: Indica link para a próxima parte do documento atual.</li>
+                    <li>prev: Indica link para a parte anterior do documento atual.</li>
+                    <li>author: Indica que é um link para o site do autor do artigo atual.</li>
+                    <li>external: Indica link para site externo.</li>
+                    <li>nofollow: impede que os mecanismos de busca indexem esse link.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <h3>Links Externos</h3>
+    <p>
+        Você pode acessar meu repositório no <a href="https://github.com/gustavoguanabara/html-css/tree/master/aulas-pdf" target="_blank" rel="external">GitHub</a>. <br>
+        Você também pode me acompanhar pelo <a href="https://www.youtube.com/cursoemvideo" target="_blank" rel="external">YouTube</a><!--Usa o rel =external, para indicar para o google que é um link externo-->
+    </p>
+    <h3>Links Internos</h3>
+    <p> <!--para buscar os arquivos, basta apetar ctrl+espaço-->
+        Esta é a primeira página do meu site. Se você quiser pode também acessar a <a href="pag002.html" target="_self" rel="next">Segunda página</a> <!--Usa o rel =next ou prev, para indicar para o google a organização-->
+        <br>
+        Você também pode acessar minha <a href="noticias/pag003.html" target="_self" rel="next">Página de Noticias</a> <!--Para abrir o link na mesma aba, você deixa sem nada ou coloca target="_self"-->
+        <br>
+        <h3>Links para Downloads</h3>
+        <ul>
+            <li><a href="livro/PROJETO.pdf" download="PROJETO" type="application/pdf" target="_blank">Para baixar o livro em PDF</a></li> <!--midea type do arquivo pdf para ser baixado-->
+            <li><a href="livro/Torna-te.rar" type="application/zip">Para baixar o livro compactado</a></li>
+        </ul>
+    </p>
+    <hr>
+    <br>
+    <p>
+        <a class="voltarLink" href="../../index.html"><img class="voltarImg" src="../../img/voltar2.png" alt="voltar">Home</a>
+    </p>
+</body>
+</html>

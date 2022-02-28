@@ -1,0 +1,81 @@
+body{
+    background-color: #0a0a0a;
+   /*background-image: image("meuhtml/img/bg-04.jpg");*/
+}
+header{
+   background-color: #fff;
+   width: auto;
+   min-height: 100%;
+   margin: 50px;
+   padding: 25px;
+}
+.home2{
+   color: #aabad6;
+   font: bold 20pt;
+   font-family: 'New Tegomin', serif;
+   font-family: 'Tenor Sans', sans-serif;
+   text-align: center;
+   background-color: #05183b;
+   box-shadow: 20px 10px 10px grey;
+   padding: 15px;
+   
+}
+.menu, .modulo, .exercicio, .desafio, .extra, .seliga{
+   list-style-type: none;
+   font: bold 16px;
+   font-size: large;
+   padding: 10px;
+   font-family: 'Lato', sans-serif;
+   font-family: 'New Tegomin', serif;
+   font-family: 'Tenor Sans', sans-serif;
+}
+
+.modulo:hover, .exercicio:hover, .desafio:hover, .extra:hover, .seliga:hover{
+   list-style-type: none;
+   font: bold 18px;
+   font-family: 'New Tegomin', serif;
+   font-family: 'Tenor Sans', sans-serif;
+   font-size: large;
+   padding: 10px;
+   color: brown;
+}
+.lista{
+   text-decoration: none;
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   font: normal 14px Arial;
+   padding-left: 20px;
+   margin: auto;
+   color: #2d3147;
+}
+.lista:hover{
+   cursor: pointer;
+   display: flex;
+   flex-direction: column;
+   font: italic 16px Arial;
+   padding-left: 20px;
+   margin: auto;
+   color: darkblue;
+   
+}
+footer{
+   background-color: #b3b3c4ef;
+   color: #5959ac;
+   text-align: center;
+   padding-top: 1px;
+   margin-bottom: 0%;
+
+}
+.listSocialMedia{
+   list-style-type: none;
+   text-decoration: none;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+}
+.copy{
+   padding-top: 6px;
+   color: #fff;
+   font-size: small;
+}

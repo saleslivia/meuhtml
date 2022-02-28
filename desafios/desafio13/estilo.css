@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+main{
+    color: #0000008c;
+    margin-bottom: 60px;
+  }
+.topo {
+    width: 100%;
+    background-color: #00cad1;
+  }
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.topo .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 60px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.topoTitulo{
+    font-weight: 600;
+    font-size: 28px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topoTitulo a {
+    display: flex;
+}
+.topoLogo {
+    height: 60px;
+}
+.linkTopo{
+    display: flex;
+}
+.linkTopo a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+}
+.linkTopo a:hover{
+    color: #004b4c;
+}
+#sobre, #especialidades, #contato {
+  padding: 40px 20px 0;
+}
+.containerGeral{
+    position: relative;
+    background-image: url('assets/recepcao.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+.containerGeralTitulo{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    padding: 10px;
+}
+.containerGeral h1{
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 38px;
+    margin: 0;
+}
+.conteudo{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.conteudo h2, .conteudo h3{
+    margin: 0;
+}
+.boxSobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxSobre h3{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.boxSobre img{
+    height: 250px;
+}
+.boxEspecialidades {
+    display: flex;
+    flex-wrap: wrap;
+}
+.boxEspecialidade{
+    border-radius: 3px;
+    box-shadow: 0px 1px 10px rgb(0 0 0 / 50%);
+    margin: 20px;
+    width: calc(100% / 3 - 40px);;
+}
+.boxEspecialidade img {
+    width: 100%;
+}
+.boxEspecialidade figcaption {
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.boxEspecialidade figcaption a {
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #0000008c;
+}
+
+.boxEspecialidade figcaption a:hover {
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #0d0d0fe3;
+    font-size: 17px;
+}
+.boxLinkHorarios{
+    text-align: center;
+    margin-top: 20px;
+}
+.linkHorarios{
+    background-color: #00cad1;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+footer {
+    background-color: #0d6e71;
+    color: #fff;
+    padding: 20px;
+}
+  
+footer .container {
+    text-align: center;
+}
+@media (max-width: 1024px) { 
+    .containerGeral{
+        height: 400px;
+    }
+}
+@media (max-width: 768px) { 
+    .containerGeral{
+        height: 300px;
+    }
+    .boxSobre img{
+        display: none;
+    }
+    .boxEspecialidade{
+        width: calc(100% / 2 - 40px);
+    }
+    .boxEspecialidades{
+        justify-content: center;
+    }
+    .tabelaEspecialista img{
+        display: none;
+    }
+    .tabelaEspecialistas {
+        width: 100%;
+    }
+    .tabelaEspecialista{
+    height: auto;
+    justify-content: center;
+    }
+}
+@media (max-width: 425px) { 
+    .containerGeral{
+        height: 200px;
+    }
+    .containerGeral h1{
+        font-size: 28px;
+    }
+    .boxEspecialidade{
+        width: 100%;
+    }
+    .topo .container { 
+        flex-direction: column; 
+    }
+    .topoTitulo { 
+        margin: 10px 0; 
+    }
+    .linkTopo { 
+        width: 100%; 
+        border-top: 1px solid #009fa5; 
+        justify-content: space-around;
+    }
+    .tabelaEspecialista{
+        padding: 0;
+    }
+}
+
+/*PAGINA ESPECIALIDADES*/
+.containerLinksEspecialidades{
+    padding: 0 20px;
+    text-align: center;
+}
+.linksEspecialidades{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+}
+.linksEspecialidades a{
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid #00cad1;
+    margin: 0 10px 10px;
+    font-size: 18px;
+}
+.linksEspecialidades a:hover{
+    color: #0d6e71;
+}
+.sessaoEspecialidade{
+    margin-top: 40px;
+}
+.tituloEspecialidade{
+    padding: 0 20px;
+}
+.tabelaEspecialista{
+    display: flex;  
+    height: 240px;
+    padding: 0 20px;
+}
+.tabelaEspecialista img{
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+}
+.tabelaEspecialistas thead th{
+    color: #fff;
+    background-color: #00cad1;
+    text-align: center;
+}
+.tabelaEspecialistas tbody tr:nth-of-type(2n+1) {
+    background-color: #cdcdcd;
+    border: 1px solid #f1f1f1;
+}
+.tabelaEspecialistas tr{
+    background-color: f1f1f1;
+    color: #585757;
+    font-weight: 500;
+    text-align: center;
+}
+.tabelaEspecialistas {
+    border-spacing: 0;
+    text-align: left;
+    width: 70%;
+    height: 100%;
+}
+.tabelaEspecialistas th, .tabelaEspecialistas td  {
+    padding: 10px;
+}

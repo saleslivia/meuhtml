@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CSS</title>
+</head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <br>
+        <h1 class="titleSecond"> CSS - Cascading Style Sheets </h1><br>
+        <div>
+            <img class="imgHome" src="img/css.jpg" alt="css">            
+        </div>
+        <div class="conteudo2">
+            <p>
+                <h3>- Pseudo-classes do CSS</h3>
+                Uma pseudo-classe CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado, como por exemplo <code class="destaque">:hover</code>. <br> 
+                As pseudo-classes permitem destacar um parágrafo do texto ou alterar o status de um conteúdo. <br>
+                Sintax:
+                <div class="codigo2">
+    <pre>
+        seletor:pseudo-classe {
+            propriedade: valor;
+        }
+    </pre>
+                </div>
+                <h4>Principais Pseudo-classes</h4>
+                <ul class="listaNone">
+                    <li><em class="destaque">:first-child</em>: representa qualquer elemento que seja o primeiro filho de seus pais.
+                        <div class="codigo2">
+    <pre>
+        span:first-child {
+            background-color: lime;
+        }
+    </pre>
+                        </div></li>
+                    </li>
+                    <li><em class="destaque">:hover</em>: tem como efeito, alterar a estilização de um elemento quando o ponteiro do mouse estiver em cima. Geralmente são aplicados em botões, logos, imagens e etc.
+                        <div class="codigo2">
+    <pre>
+        div.menu-bar ul ul {
+            display: none;
+        }
+          
+        div.menu-bar li:hover > ul {
+            display: block;
+        }
+    </pre>
+                        </div>
+                    </li>
+                    <li><em class="destaque">:nth-of-type</em>: tem por objetivo permitir que selecionemos um ou mais elementos baseado em uma ordem de origem, através do seu parâmetro. Normalmente usada para tabelas. Ela permite o uso de fórmulas.
+                    <div class="codigo2">
+    <pre>
+        /* Parágrafos ímpares */
+        p:nth-of-type(2n+1) {
+            color: red;
+        }
+
+        /* Parágrafos pares */
+        p:nth-of-type(2n) {
+            color: blue;
+        }
+
+        /* Primeiro parágrafo */
+        p:nth-of-type(1) {
+            font-weight: bold;
+        }
+
+        /* Dois primeiros parágrafos */
+        p:nth-of-type(-n+2) {
+            font-weight: bold;
+        }
+    </pre>
+                    </div></li>
+                    <li><em class="destaque">:nth-last-child</em>: Seleciona tudo que não atende a uma determinada condição. Usando os parâmentros <span class="destaque">odd</span> e <span class="destaque">even</span>, ele seleciona apenas os pares (odd) ou ímpares (even) contando a partir do último elemento. Caso a pseudo-classe seja aplica sem a palavra last (:nth-child), a contagem será do primeiro para o último.
+                        <div class="codigo2">
+    <pre>
+        p:nth-last-child {
+            background-color: #eee;
+        }
+
+        p:nth-child {
+            background-color: #eee;
+        }
+    </pre>
+                        </div></li>
+                    <li><em class="destaque">Inputs em Formulários</em>: facilita a comunicação com o usuário durante a utulização de Formulários. <br>
+                    Podemos usar diversas pseudo-classes em formulários: <br>
+                    <ul class="subLista">
+                        <li>:disabled: representa qualquer elemento desativado.</li>
+                        <li>:read-only: representa um elemento que não pode ser editado pelo usuário.</li>
+                        <li>:checked: representa um elemento radio, checkbox ou option que está marcada ou alternado para um estado ligado.</li>
+                    </ul>
+                        <div class="codigo2">
+    <pre>
+        input:disable{
+            background:#eee;
+            border: 1px solid #222;
+            cursor: not-allwed;
+        } 
+        input: not(:disable){
+            background:#eee;
+            border: 1px solid #222;
+            color:green;
+        } /*tudo que não estiver desabilitado*/
+
+        p:read-only {
+            background-color: #ccc;
+          }
+
+          input:checked + label{
+            border: 1px solid blue;
+            color: green;
+          }
+    </pre>
+                        </div></li>
+                </ul>
+            <br><br>
+            Os pseudo-elementos nos permitem selecionar algumas áreas internas de um elemento HTML e customizá-las através de propriedades. <br>
+            Selecionar a área que antecede o conteúdo de um elemento adicionando a ela texto ou imagens, ou estilizar apenas a primeira linha de um elemento de texto são apenas algumas das possibilidades criadas por esse recurso. <br>
+            Sintax:
+            <div class="codigo2">
+<pre>
+    [seletor]::pseudo-elemento { 
+        propriedade : valor; 
+    }
+</pre>
+            </div>
+            <h4>Principais Pseudo-elementos</h4>
+                <ul class="listaNone">
+                    <li><em class="destaque">::first-line</em>: é utilizado quando desejamos customizar o conteúdo apresentado na primeira linha de um elemento.
+                        <div class="codigo2">
+<pre>
+    p::first-line {
+        font-size: 16px;
+        }
+</pre>
+                        </div></li>
+                    <li><em class="destaque">::first-letter</em>: nos permite selecionar a primeira letra do conteúdo de um elemento. Caso a primeira letra venha acompanhada do caracter "", ela também será modificada.
+                        <div class="codigo2">
+<pre>
+    p::first-letter {
+        color: red;
+        font-size: 32px;
+    }
+</pre>
+                        </div>
+                    </li>
+                    <li><em class="destaque">::before</em>: este seletor cria um falso elemento que nos permite adicionar conteúdo, antes do conteúdo do elemento selecionado (usando a propriedade <span class="destaque">content</span> ).
+                        <div class="codigo2">
+<pre>
+    div::before {
+        content: “pseudo-elemento ::before”;
+        color: blue;
+    }
+</pre>
+                        </div></li>
+                    <li><em class="destaque">::after</em>: este pseudo-elemento também cria um falso elemento que nos permite adicionar conteúdo ao elemento selecionado, mas desta vez no final dele.
+                        <div class="codigo2">
+<pre>
+    div::after {
+        content: "pseudo-elemento ::after";
+        color: red;
+    }
+    ;
+</pre>
+                        </div></li>
+                    <li><em class="destaque">::selection</em>: é utilizado para selecionar o conteúdo de um elemento e, a partir disso, customizar algumas propriedades dessa área, como a cor de fundo e do texto.
+                        <div class="codigo2">
+<pre>
+    p::selection {
+        color: red;
+    }
+</pre>
+                        </div></li>
+                </ul>
+            </p>
+        </div>  
+    </div>
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>

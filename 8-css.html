@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CSS</title>
+</head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <br>
+        <h1 class="titleSecond"> CSS - Cascading Style Sheets </h1><br>
+        <div>
+            <img class="imgHome" src="img/css.jpg" alt="css">            
+        </div>
+        <div class="conteudo">
+            <p>
+                <h3>- Seletores -</h3>
+                As folhas de estilo CSS's são um mecanismo usado para adiconar estilo a uma página web. Elas são usadas para configurar um resultado visual dos
+                elementos HTML, usando para isso regras. <br>
+                Não basta ter o melhor conteúdo. Ele precisa estar bem apresentado! <br>
+            </p>
+            <p>
+                O CSS pode ser inserido na página de três formas distintas:
+                <ul>
+                    <li><em class="destaque">CSS Inline:</em> O estilo é aplicado dentro de parâmetros de HTML5, usado para alterar áreas pontuais: 
+                        <br> <br>
+                        <div class="codigo">
+<pre>
+    &lt;body style="font-family: Arial; color: blue;" &gt;
+        &lt;h1 style="color: red;"&gt;Capítulo 1&lt;/h1&gt;
+        &lt;p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nihil rerum ut error! <br>           A laudantium sequi eius exercitationem modi?&lt;/p&gt;
+        &lt;h2&gt;Capítulo 1.1&lt;/h2&gt;
+        &lt;p style="font-style: italic;"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>           Pariatur aperiam minus architecto obcaecati a excepturi! Magni!&lt;/p&gt;
+    &lt;/body&gt;
+</pre> <br>
+                        </div>
+                    </li> <br>
+                    <li><em class="destaque">CSS Interno:</em> Podemos adicionar a TAG <code class="destaque">&lt;style&gt;</code> dentro da área <code class="destaque">&lt;head&gt;</code> do nosso documento HTML local e dentro dele aplicar as configurações.
+                        <br><br>
+                        <div class="codigo">
+<pre>
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title>CSS Interno&lt;/title&gt;
+        &lt;style&gt;
+            body{
+                font-family: Arial;
+                color: blue;
+            }
+            h1{
+                color: red;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+</pre><br>
+                        </div>
+                    </li> <br>
+                    <li><em class="destaque">CSS Externo:</em> A maneira mais comum é usando o CSS em um arquivo externo. Isso permite uma maior organização e possibilita que o código seja reaproveitado em outras páginas. <br>
+                    Para usar o arquivo externo usamos a TAG <code class="destaque">&lt;link&gt;</code> dentro da área <code class="destaque">&lt;head&gt;</code>. <br><br>
+                        <div class="codigo">
+<pre>
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;CSS Interno&lt;/title&gt;
+        &lt;style&gt;
+        &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;
+</pre> <br>
+                        </div>
+                    </li>
+                </ul>
+            </p>
+
+           <!-- -------------------------------------------------------------------
+               voltar na introdução https://www.devmedia.com.br/css-texto/41232
+            ---------------------------------------------------------------------->
+            <p>
+                <div>
+                    Esta é a sintaxe usada no CSS:
+                    <figure class="figureImg">
+                        <img src="img/sintax-css.jpg" alt="sintax-css">
+                        <figcaption class="refImg">Fonte: https://www.cursoemvideo.com.br/</figcaption>
+                    </figure>
+                </div>
+                <ul>
+                    <li><em class="destaque">Seletor:</em> Aqui definimos a qual ou quais elemento serão aplicados o estilo abaixo.</li>
+                    <li><em class="destaque">Declaração:</em> Informamos quais elementos do seletor serão modificados. Estas informações devem estar dentro de <span class="destaque">{}</span>.</li>
+                    <li><em class="destaque">Propriedade e Valor:</em> São palavras reservadas do CSS</li>
+                </ul>
+            </p>
+            <p>
+                Podemos usar os seguintes seletores:
+                <div class="codigo">
+    <pre>
+        &lt;body&gt;
+            <strong>&lt;h1&gt;</strong>Olá Mundo!&lt;/h1&gt;
+            &lt;div <strong>id="container"</strong>&gt;
+                &lt;a <strong>class="subMenu"</strong> href="extra/blog.html" target="_blank">PROJETO 3 - Blog&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+    </pre>
+                </div>
+                <ul>
+                    <li><em class="destaque">Elemento:</em> Usado quando queremos aplicar a regra a um elemento HTLM. <br><br>
+                    <div class="codigo">
+    <pre>
+        h1{
+            color: red;
+            }
+    </pre>
+                    </div>
+                    </li>
+                    <li><em class="destaque">Id:</em> Usado quando apenas um elemento deve receber o estilo definido na regra. <br><br>
+                        <div class="codigo">
+    <pre>
+        #container{
+            background-color: #dedee4ec;
+            padding: 20px;
+            }
+    </pre>
+                        </div>
+                        </li>
+                    <li><em class="destaque">Classe:</em> Usamos a classe quando muitos elementos compartilham do estilo definido nessa regra. <br><br>
+                    <div class="codigo">
+    <pre>
+        .subMenu{
+            list-style-type: circle;
+            padding-left: 10px;
+            }
+    </pre>
+                    </div>
+                    </li> <br><br>
+                    <li> Podemos também agrupar mais de um setor, para que a regra seja aplicada a todos: <br><br>
+                        <ul>
+                            <li>Agrupamento por elementos  <br><br>
+                                <div class="codigo">
+            <pre>
+                h1,p,h3{
+                    color: red;
+                    }
+            </pre>
+                                </div>
+                            </li>
+                            <li>Agrupamento por descendência de elementos  <br><br>
+                                <div class="codigo">
+            <pre>
+                div p{
+                    color: red;
+                    }
+            </pre>
+                                </div>
+                            </li>
+                            <li>Agrupamentos por classes (o elemento tem como atributo duas classes)  <br><br>
+                                <div class="codigo">
+            <pre>
+                .menu.subMenu{
+                    list-style-type: circle;
+                    padding-left: 10px;
+                    }
+            </pre>
+                                </div>
+                            </li>
+                            <li>Agrupamento por descendência de classes (uma classe é interna a outra)  <br><br>
+                                <div class="codigo">
+            <pre>
+                .menu .subMenu{
+                    list-style-type: circle;
+                    padding-left: 10px;
+                    }
+            </pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </p> <br><br>
+            <p>
+                <h3>- CSS: Box Model -</h3>
+                O motor de renderização do navegador representa cada elemento como uma caixa retangular. O que determinam o espaço que o mesmo ocupa na tela do navegador é o conteúdo somado a margem, borda e preenchimento do elemento (altura, largura, preenchimento e borda).
+                <figure class="figureImg">
+                    <img src="img/css-boxmodel.JPG" alt="box-model">
+                    <figcaption class="refImg">Fonte: https://www.devmedia.com.br/css-box-model/41237</figcaption>
+                </figure>
+                A forma como o cálculo da box model é calculada depende da propriedade <span class="destaque">box-sizing</span>. Podemos considerar incorporar os valores de border e padding nas dimensões originais do elemento ou deixar eles somando. <br> 
+                O valor padrão é o <span class="destaque">content-box</span>. Nele é levados em consideração apenas o conteúdo do elemento. <br>
+                Outro valor possível é o <span class="destaque">border-box</span>, altera a forma como o Box Model é calculado, incorporando os valores de padding e border à largura do box criado pelo elemento HTML.
+                <ul>
+                    As unidades de medidas mais usadas são: <br><br>
+                    <li><strong>Px:</strong>A unidades de medida do CSS mais comum é a pixels (px).
+                        <div class="codigo">
+<pre>
+    blockquote {
+        height: 400px;
+        width: 200px;
+    }
+</pre>
+                        </div>
+                        </li>
+                    <li><strong>%:</strong> Trabalha com percentual de valor atual do documento. <br><br>
+                     <div class="codigo">
+<pre>
+ blockquote {
+     width: 50%;
+     height: 40%;
+     }
+</pre>
+                     </div>
+                     </li>
+                     <li><strong>pt:</strong> Um ponto é uma unidade de medida utilizada para a vida real (1pt=1 polegada). <br><br>
+                     <div class="codigo">
+<pre>
+ blockquote {
+     width: 50pt;
+     height: 80pt;
+     }
+</pre>
+                     </div>
+                     </li>
+                    </li>
+                    <li><strong>em:</strong> 1em é igual ao tamanho atual do elemento. <br><br>
+                    <div class="codigo">
+<pre>
+blockquote {
+    width: 50em;
+    height: 10em;
+    }
+</pre>
+                    </div>
+                    </li>
+                </ul>
+                <br><br>
+                O controle das áreas que compõem um box são:
+                <ul>
+                    <li><em class="destaque">Margin:</em> Essa propriedade controla a área de margem de um elemento, isso influencia no espaçamento entre o elemento e os demais elementos ao seu redor. <br><br>
+                        <div class="codigo">
+    <pre>
+        blockquote {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-left: 0; */remove a margem.*/
+            margin: 16px 40px 16px 40px; /*margin: top right bottom left*/
+        }
+    </pre>
+                        </div>
+                    </li>
+                    <li><em class="destaque">Padding:</em> É a propriedade que define uma a distância entre o conteúdo de um elemento e suas bordas. É possível usar apenas o <span class="destaque">padding</span> ou, em situações que demandem um maior controle, usar as variações <span class="destaque">padding-top</span>, <span class="destaque">padding-right</span>, <span class="destaque">padding-bottom</span>, <span class="destaque">padding-left</span>. Podemos também usar a forma resumida <span class="destaque">Shorthand</span> padding: top right bottom left.<br><br>
+                    <div class="codigo">
+    <pre>
+        blockquote {
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 50px;
+            padding-right: 25px;
+            padding: 10px 25px 20px 50px; /*padding: top right bottom left*/
+        }
+    </pre>
+                    </div>
+                    </li>
+                    <li><em class="destaque">Border:</em> Toda a caixa possui uma borda (Figura 1) que é invisível por padrão. Ela se divide em três sub-propriedades que são: <br>
+                        <ul>
+                            <li><strong>border-width:</strong> Controla a espessura da borda. Pode receber valores numéricos (px) ou os valores especiais <span class="destaque">thin</span> (o valor da borda se torna igual a 1px para todos os lados), <span class="destaque">medium</span> (o valor da borda se torna igual a 3px para todos os lados) e <span class="destaque">thick</span>(o valor da borda se torna igual a 5px para todos os lados).</li>
+                            <li><strong>border-style:</strong> Controla o estilo da borda. Podemos usar 8 estilos de bordas: <span class="destaque">solid, dotted, dashed, double, groove, ridge, inset, outset</span>.
+                                <figure class="figureImg">
+                                    <img src="img/css-border.PNG" alt="css-border">
+                                    <figcaption class="refImg">Fonte: https://www.devmedia.com.br/view/viewaula.php?idcomp=40860</figcaption>
+                                </figure>
+                            </li>
+                            <li><strong>border-color:</strong> Controla a cor da borda e pode ser informada utilizando uma das formas de se criar cores do CSS.</li>
+                        </ul> <br><br>
+                    <h4><em class="destaque">CSS Border: Propriedades</em></h4>
+                    <ul>
+                        <li><strong>border-radius:</strong> Usada para criar cantos arredondados nas bordas de acordo com o valor fornecido (valor do raio). É possível definir um valor único para todos os vértices ou trabalhar neles de forma individual (Superior esquerdo, Superior direito, Inferior direito, Inferior esquerdo).
+                            <figure class="figureImg">
+                                <img src="img/css-border-radius.PNG" width="350px" alt="css-border-radius">
+                                <figcaption class="refImg">Fonte: https://www.devmedia.com.br/css3-border-trabalhando-com-bordas-em-css3/28923</figcaption>
+                            </figure>
+                            <div class="codigo">
+    <pre>
+        #div1{
+            border:solid 1px #000;
+            border-radius:0px 20px 0px 20px;
+        }
+    </pre>
+                            </div>
+                            Deixando imagens arredondadas:
+                            <figure class="figureImg">
+                                <img src="img/css-border-radius2.PNG" width="350px" alt="css-border-radius2">
+                                <figcaption class="refImg">Fonte: https://www.devmedia.com.br/css-border-radius/36825</figcaption>
+                            </figure>
+                            <div class="codigo">
+    <pre>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        #img_circular {
+            border-radius: 200px
+        }
+    </pre>
+                            </div>
+                        </li>
+                        <li><strong>box-shadow:</strong> Usada para criar efeito de sobreamento. Devemos usar a seguinte sintax: <br> <span class="destaque">box-shadow: h-shadow v-shadow blur spread color inset;</span>
+                        <ul>
+                            <li>h-shadow: posição horizontal da sombra.</li>
+                            <li>v-shadow: posição vertical da sombra.</li>
+                            <li>blur: define a intensidade do efeito blur (borrão) da sombra (opcional).</li>
+                            <li>spread: o tamanho da sombra (opcional).</li>
+                            <li>color: a cor da sombra.</li>
+                            <li>inset: define se a sombra é externa (padrão) ou interna (inset).</li>
+                        </ul>
+                        <figure class="figureImg">
+                            <img src="img/css-border-shadow.PNG" alt="css-border-shadow">
+                            <figcaption class="refImg">Fonte: https://www.devmedia.com.br/css3-border-trabalhando-com-bordas-em-css3/28923</figcaption>
+                        </figure>
+                        <div class="codigo">
+<pre>
+    #div1{
+        border:solid 1px;
+        box-shadow: 10px 10px 10px 5px black;
+    }
+</pre>
+                        </div>
+                        </li>
+                        <li><strong>border-image:</strong> Permite definir uma imagem para ser usada no preenchimento da borda de um elemento. Não é suportada pelo IE e requer configurações adicionais para diferentes browsers.
+                            <figure class="figureImg">
+                                <img src="img/css-border-image.PNG" width="350px" alt="css-border-image">
+                                <figcaption class="refImg">Fonte: https://www.devmedia.com.br/css3-border-trabalhando-com-bordas-em-css3/28923</figcaption>
+                            </figure>
+                            <div class="codigo">
+    <pre>
+        #div1{
+            border-width:10px;
+            border-image:url(border.png) 30 30 repeat;
+            -moz-border-image:url(border.png) 30 30 repeat; /* Firefox */
+            -webkit-border-image:url(border.png) 30 30 repeat; /* Safari e Chrome */
+            -o-border-image:url(border.png) 30 30 repeat; /* Opera */
+        }
+    </pre>
+                            </div>
+                        </li>
+                    </ul>
+                    <br><br>
+                    </li>
+                    <p>
+                        <h4><em class="destaque">Visibilidade e opacidade</em></h4>
+                        <ul>
+                            <li><strong>Exibindo e ocultando caixas</strong>
+                            <ul>
+                                <li>visibility: Visibility permite exibir/ocultar um elemento em uma página, mas sempre ocupa o lugar onde ele está no layout. <br>
+                                Pode assumir dois valores <span class="destaque">visible
+                                </span> (Valor padrão. O elemento fica visível na página) e <span class="destaque">hidden</span> (O elemento se torna invisível, mas continua ocupando o espaço na página.) <br>
+                                <figure class="figureImg">
+                                    <img src="img/css-visible.png" alt="css-visible">
+                                    <figcaption class="refImg">Fonte: https://www.devmedia.com.br/view/viewaula.php?idcomp=40866</figcaption>
+                                </figure>
+                                </li>
+                                <li>display: Display permite adicionar ou remover um elemento do layout, tornando ele visível ou não.Para remover completamente um elemento do layout, como se ele não estivesse na página, usamos a propriedade display com o valor <span class="destaque">none</span>. O display também pode assumir os valores <span class="destaque">inline</span> (O elemento não inicia em uma nova linha e ocupa apenas o espaço necessário para apresentar o seu conteúdo) e <span class="destaque">block</span> (O elemento inicia em uma nova linha e vai até o final dela.)<br>
+                                </li>
+                            </ul></li> <br><br>
+                            <li><strong>Background</strong>
+                            Nos permite alterar o plano de fundo das nossas páginas htmls e seus elementos (https://www.devmedia.com.br/css-background/38313).
+                            <ul>
+                                <li>background-color: propriedade usada para alterar a cor do plano de fundo. <br> EX: <span class="destaque">background-color: #000;</span></li> <br>
+                                <li>background-image: propriedade usada para inserir imagens como plano de fundo. Usando em conjunto a função url(), na qual passamos como parâmetro o caminho da imagem a ser inserida. <br> Ex: <span class="destaque">background-image: url("pasta/Imagem.jpg");</span></li> <br>
+                                <li>background-repeat: Por padrão a imagem é inserida no canto superior esquerdo. Usamos esta propriedade para definir a maneira como a imagem será repetida no elemento. <br> <span class="destaque">repeat-y, repeat-x, no-repeat, repeat</span>.</li><br>
+                                <li>background-position: propriedade usada para definir a posição na qual a imagem será inserida. Essa posição pode ser especificada utilizando uma combinação de valores, sendo o primeiro a posição horizontal (right, center e left) e o segundo a posição vertical (top, center e bottom). Para uma maior precisão, podemos usar valores de medidas para posicionar as imagens também. <br> EX: <span class="destaque">background-position: right top; <br>             background-position: 30px 60px;</span>  /* 30px à direita e 60px abaixo */</li> <br>
+                                <li>background-attachment: propriedade usada para definir o que acontecerá com a imagem de fundo quando acontecer barra de rolagem, se ela ficará fixa, se ela se moverá junto com o movimento de scroll, entre outras opções.
+                                    <ul>
+                                        <li>scroll: Valor padrão. Ao rolar a página a imagem também irá rolar.</li>
+                                        <li>fixed: A imagem não se movimenta. Dá a impressão de que o conteúdo está deslizando sobre o fundo.</li>
+                                        <li>local: imagem de fundo de um documento interno se movimenta junto com o fundo do documento principal</li>
+                                        <li>inherit: Recebe, por herança, a mesma configuração do elemento pai.</li>
+                                        <li>initial: Indica à propriedade que o valor padrão deve ser utilizado.</li>
+                                    </ul>
+                                </li> <br>
+                                <li>background múltiplo: Podemos usar diversas imagens como plano de fundo. Basta usar a propriedade background-image e incluir, separadas por vírgula, as URLs de cada imagem. <br>
+                                EX: <br> <span class="destaque">{<br> background-image: url("pasta/Imagem1.jpg"), url("pasta/Imagem2.jpg"); <br>
+                                    background-repeat: no-repeat, repeat-x; <br>
+                                    background-position: top right, center; <br>}</span></li> <br>
+                                <li>background-size: Propriedade usada para especificar o tamanho da imagem de fundo. Podemos usar diversos tipos de medidas ou os valores pré-definidos abaixo: <br>
+                                    <ul>
+                                        <li>cover: Amplia a imagem até o ponto que preencha toda a área da página ou elemento.</li>
+                                        <li>contain: Amplia a imagem ao maior tamanho possível respeitando a área visível da página ou elemento.</li>
+                                        <li>inherit: Herda a mesma configuração definida no elemento pai.</li>
+                                        <li>initial: Utiliza o valor padrão da propriedade.</li>
+                                    </ul>
+                                </li> <br>
+                                <li>background-origin: Propriedade usada para configurar o ponto de inserção em relação aos elementos do documento. Pode iniciar junto ao padding (padding-box), junto à borda (border-box) ou junto ao conteúdo (content-box).</li> <br>
+                                <li>background-clip: propriedade usada para selecionar a área do background que será pintada. Só a borda (border-box), o padding (padding-box) ou a área do conteúdo (content-box).</li> <br>
+                                <li>background-blend-mode: Propriedade usada para atribuir efeitos pré-definidos às imagens e cores de fundo, dando a elas mais ou menos luminosidade, saturação, brilho, entre outras opções. <br>
+                                    <ul>
+                                        <li>nomal</li>
+                                        <li>multiply</li>
+                                        <li>screen</li>
+                                        <li>overlay</li>
+                                        <li>darken</li>
+                                        <li>lighten</li>
+                                        <li>color-dodge</li>
+                                        <li>saturation</li>
+                                        <li>color</li>
+                                        <li>luminosity</li>
+                                    </ul>
+                                </li> <br>
+                            </ul>
+                            </li>
+                            <li><strong>Opacity</strong> <br>
+                            Essa propriedade nos permite variar a opacidade (transparência) de um elemento. O valor varia de 0 (totalmente transparente) a 1 (totalmente opaco). <br>
+                            EX: <span class="destaque">img { opacity : 0.5 }</span>
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <h4><em class="destaque">Visibilidade e opacidade</em></h4>
+                        Propriedades que permitem aplicar efeito de sombreamento em um texto ou outro elemento de uma página web. <br><br>
+                        <ul>
+                            <li><strong>text-shadow</strong></li>
+                            <li><strong>box-shadow</strong></li>
+                        </ul> <br>
+                        Ambas as propriedades, text-shadow e box-shadow, podem ser configurados de acordo com a necessidade, mas o mais comum (completo) é atribuir valores para o deslocamento  horizontal, vertical, blur (borrado/espalhamento) e a cor da sombra. <br><br>
+                        <div class="codigo">
+    <pre>
+        div { width: 100px;
+            height: 100px;
+            border:1px solid black;
+            float: left;
+            margin-right: 100px;
+            box-shadow: 20px 20px } /*text-shadow: X Y; box-shadow: X Y;*/
+            box-shadow: 20px 20px 10px } /*text-shadow: X Y Blur; box-shadow: X Y Blur;*/
+            box-shadow: 20px 20px 10px blue }/*text-shadow: X Y Blur Cor; box-shadow: X Y Blur Cor;*/
+    </pre>
+                        </div>
+                        <figure class="figureImg">
+                            <img src="img/css-border-shadow2.png" alt="css-border-shadow2">
+                            <figcaption class="refImg">Fonte: https://www.devmedia.com.br/css-text-shadow-e-box-shadow/36826</figcaption>
+                        </figure>
+                    </p>
+                    <li><em class="destaque">Width:</em> Usado para controlar a <strong>largura</strong> de um box. Para  ter um maior controle, podemos usar o width com os parâmetros abaixo:
+                        <ul>
+                            <li><strong>Min-width ou Max-width:</strong> Aqui definimos oa valor mínimo e máximo que uma página pode assumir.
+                                <br><br>
+                                <div class="codigo">
+    <pre>
+        blockquote {
+            min-width: 200px;
+            max-width: 400px;
+        }
+    </pre>
+                                </div>
+                            </li>
+                            <li><strong>Calc:</strong> Usando este parâmetro, o CSS vai fazer um cálculo para encontrar o valor da largura ou altura da caixa. O calc suporta operações matemáticas como soma, subtração, multiplicação e divisão. <br><br>
+                                <div class="codigo">
+    <pre>
+        blockquote {
+            width: calc(100%/2-100px);
+            }
+    </pre>
+                                </div>
+                            </li> <br>
+                            <li><strong>overflow:</strong> Esta propriedade é usada quando uma caixa precisa ter um tamanho menor que o espaço em que ela está. <br> Overflow pode ser customizado com dois valores principais:
+                            <ul>
+                                <li>Hidden: Usando este valor, o conteúdo é cortado e fica oculto.</li>
+                                <li>Scroll: Neste caso, uma barra de rolagem é apresentada para que o conteúdo excedente possa ser visto.</li>
+                                <li>Além destes, também existem os valores <span class="destaque">auto</span> e <span class="destaque">visible</span>, padrão para a maioria dos elementos.</li>
+                                <div>
+                                    <figure class="figureImg">
+                                        <img src="img/css-overflow1.jpg" width="" alt="css-overflow1">
+                                        <figcaption class="refImg">Fonte: https://www.cursoemvideo.com.br/</figcaption>
+                                    </figure>
+                                    <div class="codigo">
+    <pre>
+        blockquote {
+            height: 29px;
+            overflow: hidden;
+        }
+    </pre>
+                                    </div>
+                                    <figure class="figureImg">
+                                        <img src="img/css-overflow2.jpg"  width="80%" alt="css-overflow2">
+                                        <figcaption class="refImg">Fonte: https://www.cursoemvideo.com.br/</figcaption>
+                                    </figure>
+                                    <div class="codigo">
+    <pre>
+        blockquote {
+            height: 29px;
+            overflow: scroll;
+        }
+    </pre>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        </ul>
+                        </li>
+                    <li><em class="destaque">Height:</em> Usado para controlar a <strong>altura</strong> de um box. Em algumas situações, quando é necessário um maior controle, usamos <span class="destaque">min-height </span> e <span class="destaque">max-height</span></li>
+                </ul>
+
+            </p>
+            <p>
+                <h3>- Posicionamento</h3>
+                <h4>Níveis das caixas</h4>
+                As caixas que envolvem um elemento pode ser de nível <span class="destaque">block</span> ou <span class="destaque">inline</span>.
+                <ul>
+                    <li><strong>Block (bloco):</strong> As caixas de nível bloco sempre se iniciam em uma nova linha e por padrão ocupam todo o espaço horizontal disponível. <br>
+                    Ex: <code class="destaque">&lt;h1&gt;</code>, <code class="destaque">&lt;blockquote&gt;</code>, <code class="destaque">&lt;address&gt;</code>, <code class="destaque">&lt;li&gt;</code>, <code class="destaque">&lt;pre&gt;</code>, <code class="destaque">&lt;p&gt;</code>, <code class="destaque">&lt;nav&gt;</code>, <code class="destaque">&lt;table&gt;</code>, etc.</li> <br><br>
+                    <li><strong>Inline (linha):</strong> As caixas de linha se adaptam ao fluxo de texto que as envolve. <br>
+                        Ex: <code class="destaque">&lt;code&gt;</code>, <code class="destaque">&lt;span&gt;</code>, <code class="destaque">&lt;a&gt;</code>, <code class="destaque">&lt;strong&gt;</code>, <code class="destaque">&lt;small&gt;</code>, <code class="destaque">&lt;cite&gt;</code>, <code class="destaque">&lt;label&gt;</code>, <code class="destaque">&lt;button&gt;</code>, etc.</li>
+                </ul>
+                <h4>Posicionando elementos</h4>
+                Existem duas propriedades que nos permitem posicionar elementos: <span class="destaque">position</span> e <span class="destaque">float</span>.
+                <ul>
+                    <li><strong>position:</strong> Pode receber 4 valores:
+                    <ul>
+                        <li>Fluxo normal (static): É o modelo de posicionamento padrão. Nele os elementos de bloco passarão a iniciar em uma nova linha, empurrando os demais para baixo. Quando o parâmetro é relative, usamos outras 4 propriedades para configurar o posicionamento: <span class="destaque">top</span>, <span class="destaque">bottom</span>left</span>, <span class="destaque"> e <span class="destaque">right</span>. <br><br>
+                            <div class="codigo">
+    <pre>
+        position: static;
+    </pre>
+                            </div>
+                        </li>
+                        <li>Posicionamento relativo: O elemento pode ser movido para cima, baixo, esquerda ou direita tendo como ponto de partida a sua posição no fluxo normal, sem afetar os elementos à sua volta.<br><br>
+                            <div class="codigo">
+    <pre>
+        p {
+            left: 25px;
+            position: relative;
+            top: 25px;
+        }
+    </pre>
+                            </div>
+                        </li>
+                        <li>Posicionamento absoluto: O elemento é removido do fluxo normal e os elementos em volta se comportam como se não houvesse esse elemento reposicionado.<br><br>
+                            <div class="codigo">
+    <pre>
+        h3 {
+            right: 0;
+            position: absolute;
+            top: 0;
+        }
+    </pre>
+                            </div>
+                        </li>
+                        <li>Posicionamento fixo: Essa é uma forma de posicionamento absoluto, mas o elemento não se move quando o usuário utiliza as barras de rolagem da janela do navegador. <br><br>
+                            <div class="codigo">
+    <pre>
+        h1 {
+            left: 25px;
+            position: fixed;
+            top: 25px;
+        }
+    </pre>
+                            </div>
+                        </li>
+                    </ul></li>
+                    <li><strong>float:</strong> É usado quando é necessário criar colunas. Usamos esta propriedade junto com os valores left e right.
+                        <figure class="figureImg">
+                            <img src="img/css-float.PNG" alt="css-float">
+                            <figcaption class="refImg">https://www.devmedia.com.br/view/viewaula.php?idcomp=40900</figcaption>
+                        </figure><br>
+                        Nesse modelo de posicionamento o elemento sai do fluxo normal e é posicionado totalmente a esquerda ou à direita do contêiner que o contém. <br><br>
+                        <div class="codigo">
+    <pre>
+        h1 {
+            float: right;
+            width: 200px;
+            }
+    </pre>
+                        </div> 
+                        Para criar um texto em duas colunas, basta mover um dos elementos para a direita e outro pra a esquerda.<br><br>
+                        <div class="codigo">
+    <pre>
+        h3 {
+            float: left;
+            width: 200px;
+            }
+            
+            ul {
+            float: right;
+            width: 200px;
+            }
+    </pre>
+                        </div>
+                        <figure class="figureImg">
+                            <img src="img/css-float2.png" alt="css-float2">
+                            <figcaption class="refImg">https://www.devmedia.com.br/view/viewaula.php?idcomp=40994</figcaption>
+                        </figure>
+                        Para resolver problemas dda altura de zero pixel: <br><br>
+                        <div class="codigo">
+    <pre>
+        div {
+            border: 1px solid #000;
+            overflow: auto;
+            width: 100%;
+        }
+    </pre>
+                        </div>
+                    </li>
+                </ul>
+            </p>
+        </div>  
+        </div>
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>
+colorir o codigo
+corrigir 
+https://ecstatic-shaw-7ceb62.netlify.app/livia

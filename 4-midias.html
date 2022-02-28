@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Imagens, Vídeo e Áudio</title>
+</head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <br>
+        <h1 class="titleSecond">Imagens, Vídeo e Áudio</h1><br>
+        <div>
+            <img class="imgHome" src="img/img-dinamica-2.png" alt="img-dinamica">            
+        </div>
+        <div class="conteudo">
+            <p>
+                <h3>Inserindo Imagens:</h3>
+                <ul class="lista">
+                    
+                    <li>Para inserir uma <span class="destaque">Imagem</span>, use a TAG <code class="destaque">&lt;img&gt;</code>. Nesta TAG temos alguns parâmetros:
+                        <ul class="subLista">
+                            <li>src (source): Define o nome e o endereço da imagem</li>
+                            <li>Title: Define o título da imagem</li>
+                            <li>Alt (Alternative Text): Nome de referência da imagem</li>
+                            <li>Width: Largura da imagem em pixels</li>
+                            <li>Height: Altura da imgem em pixels</li>
+                            <li>Border: Define uma moldura ao redor da imagem. O valor padrão é zero.</li>
+                            <li>Align: Define o alinhamento em relação ao espaço na página que a imagem vai estar (Left, Right, Top, Texttop, Middle, Absmiddle, Baseline, Bottom, Baseline e Absbottom.).</li>
+                            <li>Hspace: Define o espaço lateral da imagem ao resto da página.</li>
+                            <li>Vspace: Define o espaço vertical (acima e abaixo) da imagem em relação ao resto da página.</li>
+                        </ul> </li>
+                        <li>Para inserir <span class="destaque">Imagens Dinâmicas</span>, usamos a TAG <code class="destaque">&lt;picture&gt;</code>, conforme exemplo abaixo:
+                            <br><br>
+                        <div class="codigo">
+    <pre>
+        &lt;picture>
+            &lt;source media="(max-width:750px)" srcset="imagens/img-p.png"&gt;
+            &lt;source media="(max-width:1050px)" srcset="imagens/img-m.png"&gt;
+            &lt;img src="imagens/img-g.png" alt="imagem flexivel"&gt;
+        &lt;/picture&gt;
+    </pre>
+                        </div>
+                        <img src="img/img-pmg.png" alt="imagem dinamica">
+                        </li>
+                        <ul>
+                            <li>Media: indica o tamanho máximo a ser considerado para carregar a imagem
+                                indicada no atributo srcset.</li>
+                            <li>srcset: vai configurar o nome da imagem que será carregada quando o tamanho
+                                indicado for atingido.</li>
+                            <li>type: vai indicar o media type da imagem que usamos.</li>
+                        </ul>
+                </ul>
+            <h3>Inserindo Áudios:</h3>
+                <p>Para inserir áudios usamos a TAG <code class="destaque">&lt;audio&gt;</code>. Usamos com ela o parâmetro source.</p>
+                <ul class="lista">
+                    <li>
+                        Reprodução automática:
+                        <ul>
+                            <li>Autoplay</li>
+                            <li>Controls</li>
+                        </ul> <br>
+                        <audio src="audio/Fur Elise (by Beethoven) - Beethoven.mp3" controls autoplay>Fur Elise (by Beethoven) - Beethoven.mp3</audio>
+                    </li> <br>
+                    <li>
+                        Ou podemos deixar o usuário decidir se quer ou não dar o play: <br> <br>
+                        <ul>
+                            <li>Controls</li>
+                        </ul> <br>
+                        <audio src="audio/Symphony No. 5 (by Beethoven) - Beethoven.mp3" controls loop>Dê o play</audio>
+                    </li>
+                    <br>
+                    <li>
+                        Formatos de áudio diferentes:
+                        <p>
+                            Para formatos de áudio diferentes de <strong class="destaque">.mp3</strong>, usamos a TAG <code class="destaque">&lt;audio&gt;</code> e <code class="destaque">&lt;source:src="happy-mistake.mp3" type="audio/mpeg"&gt;</code>. <br>
+                        </p>
+                        <ul>
+                            <li>
+                                preload: para determinar em que momento o site inicia a execução do arquivo. Temos três configurações possíveis:
+                                <ul>
+                                    <li>Auto: O site só inicia a reprodução quando terminar de carregar o arquivo</li>
+                                    <li>Metadata: Vai carregar apenas algumas informações do arquivo, como nome, data, duração, etc.</li>
+                                    <li>None: Não carrega nada. Só quando o usuário clicar no controle.</li>
+                                </ul>
+                            </li>
+                            <li>loop: quando o áudio terminar, ele automaticamente recomeça.</li>
+                        </ul>
+                        <br>
+                        <audio preload="auto" controls loop>
+                            <source src="audio/happy-mistake.mp3" type="audio/mpeg" controls="">
+                            <source src="audio/Teste audio.ogg" type="audio/ogg">
+                            <source src="audio/Teste audio.wav" type="audio/wav">
+                            <p>Infelizmente seunavegador não consegue reproduzir áudios <a href="audio/happy-mistake.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+                        </audio>
+                        <br><br>
+                        <div class="codigo">
+<pre>
+    &lt;audio preload="auto" controls loop&gt;
+        &lt;source src="audio/happy-mistake.mp3" type="audio/mpeg" controls=""&gt;
+        &lt;source src="audio/Teste audio.ogg" type="audio/ogg"&gt;
+        &lt;source src="audio/Teste audio.wav" type="audio/wav"&gt;
+        &lt;p&gt;Infelizmente seunavegador não consegue reproduzir áudios <br> &lt;a href="audio/happy-mistake.mp3"&gt;Clique aqui para baixar o arquivo MP3&lt;/a&gt;&lt;/p&gt;
+    &lt;/audio&gt;
+</pre>
+                    </div>
+                </li>
+            <br>
+            </ul>
+            <h3>Inserindo Vídeos:</h3>
+                <ul>
+                <li>Para inserir vídeos em uma página, usamos a TAG <code class="destaque">&lt;video&gt;</code>. Ela pode ser associada ao parâmetro <strong class="destaque">source</strong>, para garantir que o vídeo será exibido em qualquer navegador.</li>
+                <li>Para inserir uma capa, usamos o parâmetro <span class="destaque">poster</span>.</li>
+                <li>Para que o vídeo reinicie após o final, usamos o parâmetro <span class="destaque">loop</span>.</li>
+            </ul>
+            <h4>Vídeos hospedados localmente:</h4>
+                <ul class="lista">
+                <li>Vídeos em um só formato: <br> <br>
+                    <video poster="img/vinho.jpg" src="video/wine.mp4" width="650px" loop controls></video>
+                </li><br>
+                <li>Vídeos compatíveis com todos os navegadores: <br><br>
+                    <video poster="img/cafe.JPG" controls width="650px">
+                        <source src="video/Coffee at the Morning.mp4" type="video/mp4"> 
+                        <source src="video/Coffee at the Morning.webm" type="video/webm">
+                        <source src="video/Coffee at the Morning.m4v" type="video/m4v">
+                        <p>Seu navegador não tem compatibilidade com reprodução de vídeo.</p>
+                    </video>
+                </li>
+                </ul>
+                <h4>Vídeos hospedados externamente:</h4>
+                <ul>
+                    <li>Vídeos do YouTube <br><br>
+                        <iframe width="650px" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <br><br>
+                        <iframe width="650" height="315" src="https://www.youtube.com/embed/dXLLzpZO_YA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </li> <br><br>
+                 
+                    <li>Vídeos do Vimeo <br><br>
+                        <iframe src="https://player.vimeo.com/video/115073009?color=ff0179" width="650" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </li>
+                </ul>
+        </div>  
+    </div>
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>

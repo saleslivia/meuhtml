@@ -1,0 +1,219 @@
+/** {/*resear configurações
+  margin: 0;
+  padding: 0;
+  border: 0;
+}*/
+
+.homePrimary{
+   /*background-color: #1a1a1b;*/
+   background-image: url("../img/tec10.jpg");
+   background-size: 110% 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+.homeSecond{
+  background-color: #f1f4f5d3;
+}
+.header{
+  background-color: #ffffffe3;
+  width: 70%;
+  display: block;
+  min-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 25px;
+}
+h1.titlePrimary{
+  color: #aabad6;
+  font: bolder 20pt;
+  font-family: 'New Tegomin', serif;
+  font-family: 'Tenor Sans', sans-serif;
+  text-align: center;
+  background-color: #05183b;
+  box-shadow: 15px 8px 15px grey;
+  padding: 15px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+h1.titleSecond{
+  color: #124296;
+  font: bold 20pt;
+  font-family: 'New Tegomin', serif;
+  font-family: 'Tenor Sans', sans-serif;
+  text-align: center;
+  background-color: #aec2e4e7;
+  box-shadow: 15px 8px 15px grey;
+  padding: 15px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+.w40{
+  width: 400px;
+}
+.menu, .modulo, .exercicio, .desafio, .extra, .seliga{
+
+  list-style-type: none;
+  font: bolder 16px;
+  font-size: large;
+  padding: 10px;
+  font-family: 'Lato', sans-serif;
+  font-family: 'New Tegomin', serif;
+  font-family: 'Tenor Sans', sans-serif;
+}
+.modulo:hover, .exercicio:hover, .desafio:hover, .extra:hover, .seliga:hover{
+  list-style-type: none;
+  font: bolder 20pt;  
+  font-family: 'New Tegomin', serif;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: x-large;
+  padding: 10px;
+  color: #800505;
+}
+.subMenu{
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: normal 14px Arial;
+  padding-left: 20px;
+  margin: auto;
+  color: #2d3147;
+}
+.subMenu:hover{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: normal 16px Arial;
+  padding-left: 20px;
+  margin: auto;
+  color: darkblue;
+}
+
+/*----------INÍCIO PÁGINAS INTERNAS----------------*/
+.container{
+  background-color: #dedee4ec;
+  padding: 20px;
+}
+.imgHome{
+  display: block; /*Centralizar a imagem*/
+  margin-left: auto;/*Centralizar a imagem*/
+  margin-right: auto;/*Centralizar a imagem*/
+  /*width: 400px;*/
+  /*height: 250px;*/
+}
+.conteudo{
+  background-color: #20252efa;
+  padding: 10px;
+  margin: 20px;
+  border: solid 1px #9e9898;
+  height: auto;
+  color: #fff;
+  font-family: 'Inconsolata', monospace;
+  text-decoration: none;
+}
+.refImg{
+  font: 9pt Arial;
+  color: #7a7a7a;
+}
+.figureImg{
+  text-align: center;
+}
+.codigo{
+  background-color: rgb(250, 246, 246);
+  color: #000;
+  padding-top: 5px;
+  width: auto;
+}
+.lista{
+  list-style-type: disc;
+}
+.subLista{
+  list-style-type: circle;
+  padding-left: 10px;
+}
+h3, h2{
+  color: #3370e0;
+}
+h4{
+  color: #3882b8;
+}
+.voltarImg{
+  vertical-align: middle;
+  width: 15px;
+  margin-right: 5px;
+}
+.voltarLink{
+  text-decoration: none;
+  vertical-align: middle;
+  color: #000;
+  font-family: 'Tenor Sans', sans-serif;
+}
+.voltarLink:hover{
+  text-decoration: none;
+  vertical-align: middle;
+  color: #000;
+  font-family: 'Tenor Sans', sans-serif;
+  font-weight: bolder
+}
+span.destaque{
+  color: #f7b5bd; 
+  font-size: medium;
+}
+code.destaque{
+  color: #b44a54; 
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #f5c0c6;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+em.destaque{
+  font-style: normal;
+  color: #97b3eb; 
+  font-weight: bold;
+}
+.link{
+  /*text-decoration: none;*/
+  color: #fff;
+}
+.link:hover{
+  text-decoration: none;
+  color: #97b3eb;
+  font-size: 17PX;
+}
+.table, th, td{
+  border: 1px solid #fff;
+}
+
+/*----------FIM PÁGINAS INTERNAS----------------*/
+
+.listSocialMedia{
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.linkSocialMedia{
+  text-decoration: none;
+}
+footer{
+  background-color: #b3b3c4ef;
+  color: #5959ac;
+  text-align: center;
+  padding-top: 1px;
+  margin-bottom: 0%;
+
+}
+.copy{
+  padding-top: 6px;
+  color: #fff;
+  font-size: small;
+}

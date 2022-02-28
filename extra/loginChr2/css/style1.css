@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+*{ /*resear configurações*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    display:flex;/*centralizar*/
+    /*border: 2px solid red;*/
+    justify-content: center; /*centralizar verticalmente*/
+    align-items: center;/*centralizar horizontalmente*/
+    height: 100vh;
+    background-color: #d6d4d3;
+    /*background-image: image("img/bg-04.jpg");*/
+    margin-right: auto;
+    margin-left: auto;
+}
+.content{
+    border-radius: 15px;
+    background-color: #fff;
+    width: 960px;
+    height: 50%;
+    display: flex; 
+    justify-content: space-between; /*espaço entre as colunas*/
+    align-items: center; 
+    position: relative;
+}
+.content::before { /*pseudo elemento da classe content*/
+    content: "";
+    position: absolute;
+    background-color: #020061;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px; /*alterar a dorda apenas de um lado*/
+    border-bottom-left-radius: 15px;
+    left: 0%;
+}
+
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    /*text-transform: capitalize;/*  coloca a primeira letra maiúscula*/
+}
+
+.titlePrimary{
+    color: #fff;
+}
+
+.titleSecond{
+    color: #020061;
+    margin-bottom: 25px;
+}
+
+.description{
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 30px; /*espaçameneto do texto*/
+}
+
+.descriptionPrimary{
+    color: #fff;
+}
+
+.descriptionSecond{
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase; 
+    color: white;
+    cursor: pointer;/*mãozinha do mouse*/
+    font-size: 10px;
+    padding: 10px 50px;
+    font-weight: bold;
+    align-self: center;
+    border: none;
+    margin-top: 1rem ;
+}
+
+.btnPrimary{ /*o que modifica o botão principal é sempre o primary*/
+    background-color: transparent;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+
+.btnPrimary:hover{/*quando passar o mouse muda de cor*/
+    background-color: #fff;
+    color: #020061;
+    font-weight: bold;
+}
+
+.btnSecond{
+    background-color: #020061;
+    border: 1px solid #020061;
+    transition: background-color .5s; /*fazer a transição de cores mais suavemente*/
+}
+
+.btnSecond:hover{
+    background-color: #fff;
+    border: 1px solid #020061;
+    color: #020061;
+}
+.content1{
+    display: flex;
+}
+
+.content1 .column2{
+    z-index: 12;
+}
+.column1{
+    text-align: center;
+    /*flex: 1 0 auto; divide o espaço entre as duas colunas proporcinal em 1-2, dimunue o tamanho, determina o tamanho onde ele começa*/
+    width: 40%;
+    z-index: 10; /*trabalha com sobreposição de telas e funicona quando o position: relative ou absolut */
+}
+
+.column2{
+    /*flex: 2 0 auto;*/
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socialMedia{
+    margin: 1rem 0;
+}
+.linkSocialMedia:not(:first-child){ /*pseudo classe, usada, neste caso, para negar que o primeiro elemento da lista de ícones pegue a margem à esqueda também*/
+    margin-left: 10px;
+}
+.linkSocialMedia:hover .itemSocialMedia{
+    background-color: #02007c;
+    border: solid 1px #02007c;
+    color: #fff;
+}
+.linkSocialMedia .itemSocialMedia{
+    transition: background-color 1s;
+}
+
+.listSocialMedia{
+    display: flex;
+    list-style-type: none;
+    /*flex-direction: column/fluxo da direção, coluna ou linha*/
+}
+
+.itemSocialMedia {
+    border: 1px solid #9495cf;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    color: #9495cf;
+    /*margin-bottom: 60px;
+    margin-top: 60px;
+    font-size: 40px;*/
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input{
+    width: 90%;
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+   /* margin: 4px;
+    padding: 8px;*/
+}
+
+input:-webkit-autofill{ /*para alterar no Chrome a cor do autofill dos inputs (atualmente é um tom de Azul Claro)*/
+    -webkit-box-shadow: 0 0 0 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #292828 !important;
+}
+
+.labelInput{
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+}
+
+.inconModify{
+    color: #9495cf;
+    padding: 0 5px;
+}
+
+.content2{
+    position: absolute; /*vai sobrepor os dois conteúdos*/
+    display: flex;
+}
+
+.content2 .column1{ /*inverter as colunas*/
+    order: 2;
+    z-index: -1;
+}
+
+.content2 .column2{/*inverter as colunas*/
+    order: 1;
+    z-index: -1;
+}
+
+.password{
+    color: #02007c;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.password::first-letter{
+    text-transform: capitalize;
+}
+
+.sign-in-js .content1 .column1{
+    z-index: -1;
+}
+
+.sign-in-js .content2 .column2{
+    z-index: 11;
+}
+.sign-in-js .content2 .column1{
+    z-index: 13;
+}
+.sign-in-js .content::before{
+    left: 60%;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 1s;
+    z-index: 12;
+}
+
+.sign-up-js .content2 .column1,
+.sign-up-js .content2 .column2{
+    z-index: -1;
+}
+
+.sign-up-js .content1 .column2{
+    z-index: 11;
+}
+
+.sign-up-js .content1 .column1{
+    z-index: 13;
+}
+.sign-up-js .content::before{
+    animation: slideup 1s;
+    z-index: 12;
+}
+
+/*DESLOCANDO CONTEÚDO ATRAS DO CONTENT::before*/
+.sign-in-js .content1 .column2{
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1s;
+}
+
+.sign-up-js .content2 .column2{
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoDir 1s;
+}
+
+/*ANIMAÇÃO CSS PARA O CONTEÚDO*/
+
+@keyframes deslocametoEsq{
+    from{
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+    25%{
+        left: -80px;
+        opacity: .5;
+    }
+    50%{
+        left: -100px;
+        opacity: .2;
+    }
+    to{
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+/*ANIMAÇÃO CSS*/
+
+@keyframes slidein{
+    from{
+        left: 0;
+        width: 40%;
+    }
+    /*25%{
+        left: 5%;
+        width: 50%;
+    }*/
+    50%{
+        left: 25%;
+        width: 50%;
+    }
+    /*75%{
+        left: 45%;
+        width: 50%;
+    }*/
+    to{
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideup{
+    from{
+        left: 60%;
+        width: 40%;
+    }
+    /*25%{
+        left: 45%;
+        width: 50%;
+    }*/
+    50%{
+        left: 25%;
+        width: 50%;
+    }
+    /*75%{
+        left: 5%;
+        width: 50%;
+    }*/
+    to{
+        left: 0%;
+        width: 40%;
+    }
+}
+/*.imgBackground{
+    background-image: url("img/bg-04.jpg");
+    background: image("img/bg-04.jpg");*/
+}
+/*.imgChr{
+    max-width: 100%;
+    /*padding-bottom: 15px;*/
+    margin: auto;
+    /*margin-bottom: 100px;*/
+    padding: auto;
+    /*display: flex;
+}
+.copyright .heart {
+    color: #db0707;
+}
+.copyright {
+    color: #4e0380;
+    font-size: 12px;
+    float: none!important;
+    padding: 51px 0px 0px 0px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+}
+.copyright {
+    
+    padding: 0px 0px 19px 0px!important;
+}*/
+ /*MOBILE*/
+ @media screen and (max-width: 1040px) {
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content::before {
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+    .content1, .content2 {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .column1, .column2 {
+        width: 100%;
+    }
+    
+    .sign-in-js .content::before {
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+
+    }
+
+    .form {
+        width: 90%;
+    }
+    
+    /* ANIMAÇÃO MOBILE CSS*/
+
+    @keyframes deslocamentoEsq {
+
+        from {
+            top: 0;
+            opacity: 1;
+            z-index: 12;
+        }
+        25% {
+            top: -80px;
+            opacity: .5;
+        }
+    
+        50% {
+            top: -100px;
+            opacity: .2;
+        }
+        to {
+            top: -110px;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+    @keyframes deslocamentoDir {
+        from {
+            top: 0;
+            z-index: 12;
+        }
+        25% {
+            top: 80px;
+        }
+    
+        50% {
+            top: 100px;
+        }
+        to {
+            top: 110px;
+            z-index: -1;
+        }
+    }
+    @keyframes slidein{
+        from{
+            top: 0;
+            height: 40%;
+        }
+        /*25%{
+            left: 5%;
+            width: 50%;
+        }*/
+        50%{
+            top: 25%;
+            height: 50%;
+        }
+        /*75%{
+            top: 45%;
+            width: 50%;
+        }*/
+        to{
+            top: 60%;
+            height: 40%;
+        }
+    }
+    
+    @keyframes slideup{
+        from{
+            top: 60%;
+            height: 40%;
+        }
+        /*25%{
+            left: 45%;
+            width: 50%;
+        }*/
+        50%{
+            top: 25%;
+            height: 50%;
+        }
+        /*75%{
+            left: 5%;
+            width: 50%;
+        }*/
+        to{
+            top: 0%;
+            height: 40%;
+        }
+    }
+ }
+ @media screen and (max-width: 740px) {
+    .form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .form {
+        width: 100%;
+    }
+}

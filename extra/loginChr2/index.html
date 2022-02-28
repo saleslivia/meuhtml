@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d7992ee6e8.js" crossorigin="anonymous"></script> <!--para poder usar ícones de redes sociais-->
+    <title>Portal Chromos</title>
+</head>
+<body class="sign-in-js imgBackground">
+    <div class="container"> <!--Início container geral-->
+        <!-- <img class="imgBackground" src="img/bg3.png" width="100%" alt="">-->
+        <div class="content content1"> <!--Início primeiro tela-->
+            <div class="column1">
+                <div><img class="imgChr" src="img/logo1.png" alt="logo"></div>
+                <h2 class="title titlePrimary">Bem vindo ao portal</h2>
+                <p class="description descriptionPrimary">Mantenha-se conectado</p>
+                <p class="description descriptionPrimary">Por favor, faça login</p>
+                <button id="signin" class="btn btnPrimary">Entre</button>
+            </div>
+            <div class="column2">
+                <h2 class="title titleSecond">Se inscreva!</h2>
+                <p class="description descriptionSecond">Curta e compartilhe estes momentos</p><!--p.description-->
+                <p class="description descriptionSecond">da nossa jornada em busca da aprovação!</p>
+                <div class="socialMedia"> <!--.social.media já cria a div formatada-->
+                    <ul class="listSocialMedia"> <!--ul>li*3>a já cria a lista toda-->
+                        <a class="linkSocialMedia" href="https://www.facebook.com/ChromosOficial/" target="_blank">
+                            <li class="itemSocialMedia">
+                                <i class="fab fa-facebook"></i>
+                            </li>
+                        </a>
+                        <a class="linkSocialMedia" href="https://www.instagram.com/accounts/login/" target="_blank">
+                            <li class="itemSocialMedia">
+                                <i class="fab fa-instagram"></i>
+                            </li>
+                        </a>
+                        <a class="linkSocialMedia" href="https://twitter.com/redechromos" target="_blank">
+                            <li class="itemSocialMedia">
+                                <i class="fab fa-twitter"></i>
+                            </li>
+                        </a>
+                        <a class="linkSocialMedia" href="https://www.youtube.com/channel/UCgFNI8VHN0VfW_c7sdXPdFg" target="_blank">
+                            <li class="itemSocialMedia">
+                                <i class="fab fa-youtube">
+                                </i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <!--
+                <form class="form">
+                    <label class="labelInput" for="">
+                        <i class="fas fa-user inconModify"></i>
+                        <input type="text" placeholder="Nome">
+                    </label>
+                    <label class="labelInput" for="">
+                        <i class="fas fa-envelope inconModify"></i>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+                    <label class="labelInput" for="">
+                        <i class="fas fa-lock inconModify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                    <button class="btn btnSecond">Salvar</button>
+                -->
+                    <p>
+                        <div class="copyright">
+                            ©<script>document.write(new Date().getFullYear())</script>, feito com 
+                            <svg class="svg-inline--fa heart" data-icon="heart" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
+                            </path>
+                            </svg> por <a href="http://www.chromos.com.br" target="_blank">Chromos</a>
+                        </div>
+                    </p>
+                </form> <!--form.form-->
+            </div><!-- second column -->
+        </div><!--Fim primeiro tela-->
+        <div class="content content2"><!--Início segunda tela-->
+            <div class="column1">
+                <img class="imgChr" src="img/logo1.png" alt="logo">
+                <h2 class="title titlePrimary">Olá amigo</h2>
+                <p class="description descriptionPrimary">Curta nossas redes sociais</p>
+                <p class="description descriptionPrimary">e embarque nessa jornada conosco</p>
+                <button id="signup" class="btn btnPrimary">Curtir</button>
+            </div>
+            <div class="column2">
+                <h2 class="title titleSecond">Acesse nosso Portal</h2>
+                 <!--<div class="socialMedia"> .social.media já cria a div formatada
+                    <ul class="listSocialMedia"> <!--ul>li*3>a já cria a lista toda
+                        <a class="linkSocialMedia" href="https://www.facebook.com/ChromosOficial/" target="_blank">
+                            <li class="itemSocialMedia">
+                                <i class="fab fa-facebook"></i>
+                            </li>
+                        </a>
+                        <a class="linkSocialMedia" href="https://www.instagram.com/accounts/login/" target="_blank">
+                            <li class="itemSocialMedia">
+                                <i class="fab fa-instagram"></i>
+                            </li>
+                        </a>
+                        <a class="linkSocialMedia" href="https://twitter.com/redechromos" target="_blank">
+                            <li class="itemSocialMedia">
+                                <i class="fab fa-twitter"></i>
+                            </li>
+                        </a>
+                        <a class="linkSocialMedia" href="https://www.youtube.com/channel/UCgFNI8VHN0VfW_c7sdXPdFg" target="_blank">
+                            <li class="itemSocialMedia">
+                                <i class="fab fa-youtube"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div> <!-- social media -->
+                <p class="description descriptionSecond">Entre com seus dados de acesso</p>
+                <form class="form">
+                    <label class="labelInput" for="">
+                        <i class="fas fa-envelope inconModify"></i>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+                    <label class="labelInput" for="">
+                        <i class="fas fa-lock inconModify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+                    <a class="password" href="#">Esqueceu sua senha?</a>
+                    <button class="btn btnSecond">Entrar</button>
+                    <br><br>
+                    <p>
+                        <div class="copyright">
+                            ©<script>document.write(new Date().getFullYear())</script>, feito com 
+                            <svg class="svg-inline--fa heart" data-icon="heart" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
+                            </path>
+                            </svg> por <a href="http://www.chromos.com.br" target="_blank">Chromos</a>
+                        </div>
+                    </p>
+                </form> 
+            </div>
+        </div><!--Fim segunda tela-->
+    </div><!--Fim container-->
+    <script src="js/app.js"></script>
+    <br>
+    <p>
+        <a href="../../index.html"><img src="../../img/voltar2.png" width="20px" alt="voltar">Volte para a Home</a>
+    </p>
+</body>
+</html>

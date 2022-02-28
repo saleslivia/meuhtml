@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áudio e Vídeo</title>
+    <style>
+        .voltarImg{
+            vertical-align: middle;
+            width: 15px;
+            margin-right: 5px;
+            }
+        .voltarLink{
+            text-decoration: none;
+            vertical-align: middle;
+            color: #000;
+            font-family: 'Tenor Sans', sans-serif;
+            }
+    </style>
+</head>
+<body>
+    <a class="voltarLink" href="../../index.html"><img class="voltarImg" src="../../img/voltar2.png" alt="voltar">Home</a>
+    <h1 style="text-align: center;">Inserindo áudios em uma página</h1>
+    <hr>
+    <ul>
+        <li>
+            Reprodução automática:
+            <ul>
+                <li>Autoplay</li>
+                <li>Controls</li>
+            </ul> <br>
+            <audio src="midia/audio/Fur Elise (by Beethoven) - Beethoven.mp3" controls autoplay>Fur Elise (by Beethoven) - Beethoven.mp3</audio>
+        </li> <br>
+        <li>
+            Ou podemos deixar o usuário decidir se quer ou não dar o play: <br> <br>
+            <ul>
+                <li>Controls</li>
+            </ul> <br>
+            <audio src="midia/audio/Symphony No. 5 (by Beethoven) - Beethoven.mp3" controls loop>Dê o play</audio>
+        </li>
+        <li>
+            Formatos de áudio diferentes:
+            <p>
+                Para formatos de áudio diferentes de <strong>.mp3</strong>, usamos a TAG <strong>&lt;audio&gt;</strong> e <strong>&lt;source:src="happy-mistake.mp3" type="audio/mpeg"&gt;</strong>. <br>
+            </p>
+            <ul>
+                <li>
+                    preload: para determinar em que momento o site inicia a execução do arquivo. Temos três configurações possíveis:
+                    <ul>
+                        <li>Auto: O site só inicia a reprodução quando terminar de carregar o arquivo</li>
+                        <li>Metadata: Vai carregar apenas algumas informações do arquivo, como nome, data, duração, etc.</li>
+                        <li>None: Não carrega nada. Só quando o usuário clicar no controle.</li>
+                    </ul>
+                </li>
+                <li>loop: quando o áudio terminar, ele automaticamente recomeça.</li>
+            </ul>
+            <br>
+            <audio preload="auto" controls loop>
+                <source src="midia/audio/happy-mistake.mp3" type="audio/mpeg" controls="">
+                <source src="midia/audio/Teste audio.ogg" type="audio/ogg">
+                <source src="midia/audio/Teste audio.wav" type="audio/wav">
+                <p>Infelizmente seunavegador não consegue reproduzir áudios <a href="midia/audio/happy-mistake.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+            </audio>
+        </li>
+    </ul>
+    <br><br>
+    <hr>
+    <h1 style="text-align: center;">Inserindo Vídeos em uma página</h1>
+    <hr>
+    <p>
+        Vamos aprender a inserir <strong>vídeos</strong> em HTML.
+    </p>
+    
+    <hr>
+    <a class="voltarLink" href="../../index.html"><img class="voltarImg" src="../../img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>

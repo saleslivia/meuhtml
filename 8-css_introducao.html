@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CSS</title>
+</head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <br>
+        <h1 class="titleSecond"> CSS - Cascading Style Sheets </h1><br>
+        <div>
+            <img class="imgHome" src="img/css.jpg" alt="css">            
+        </div>
+        <div class="conteudo2">
+            <p>
+                <h3>- Seletores -</h3>
+                As folhas de estilo CSS's são um mecanismo usado para adiconar estilo a uma página web. Elas são usadas para configurar um resultado visual dos
+                elementos HTML, usando para isso regras. <br>
+                Não basta ter o melhor conteúdo. Ele precisa estar bem apresentado! <br>
+            </p>
+            <p>
+                O CSS pode ser inserido na página de três formas distintas:
+                <ul>
+                    <li><em class="destaque">CSS Inline:</em> O estilo é aplicado dentro de parâmetros de HTML5, usado para alterar áreas pontuais: 
+                        <br> <br>
+                        <div class="codigo2">
+<pre>
+    &lt;body style="font-family: Arial; color: blue;" &gt;
+        &lt;h1 style="color: red;"&gt;Capítulo 1&lt;/h1&gt;
+        &lt;p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nihil rerum ut error! <br>           A laudantium sequi eius exercitationem modi?&lt;/p&gt;
+        &lt;h2&gt;Capítulo 1.1&lt;/h2&gt;
+        &lt;p style="font-style: italic;"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>           Pariatur aperiam minus architecto obcaecati a excepturi! Magni!&lt;/p&gt;
+    &lt;/body&gt;
+</pre> <br>
+                        </div>
+                    </li> <br>
+                    <li><em class="destaque">CSS Interno:</em> Podemos adicionar a TAG <code class="destaque">&lt;style&gt;</code> dentro da área <code class="destaque">&lt;head&gt;</code> do nosso documento HTML local e dentro dele aplicar as configurações.
+                        <br><br>
+                        <div class="codigo2">
+<pre>
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title>CSS Interno&lt;/title&gt;
+        &lt;style&gt;
+            body{
+                font-family: Arial;
+                color: blue;
+            }
+            h1{
+                color: red;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+</pre><br>
+                        </div>
+                    </li> <br>
+                    <li><em class="destaque">CSS Externo:</em> A maneira mais comum é usando o CSS em um arquivo externo. Isso permite uma maior organização e possibilita que o código seja reaproveitado em outras páginas. <br>
+                    Para usar o arquivo externo usamos a TAG <code class="destaque">&lt;link&gt;</code> dentro da área <code class="destaque">&lt;head&gt;</code>. <br><br>
+                        <div class="codigo2">
+<pre>
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;CSS Interno&lt;/title&gt;
+        &lt;style&gt;
+        &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;
+</pre> <br>
+                        </div>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <div>
+                    Esta é a sintaxe usada no CSS:
+                    <figure class="figureImg">
+                        <img src="img/sintax-css.jpg" alt="sintax-css" >
+                        <figcaption class="refImg">Fonte: https://www.cursoemvideo.com.br/</figcaption>
+                    </figure>
+                </div>
+                <ul>
+                    <li><em class="destaque">Seletor:</em> Aqui definimos a qual ou quais elemento serão aplicados o estilo abaixo.</li>
+                    <li><em class="destaque">Declaração:</em> Informamos quais elementos do seletor serão modificados. Estas informações devem estar dentro de <span class="destaque">{}</span>.</li>
+                    <li><em class="destaque">Propriedade e Valor:</em> São palavras reservadas do CSS</li>
+                </ul>
+            </p>
+            <p>
+                Podemos usar os seguintes seletores:
+                <div class="codigo2">
+    <pre>
+        &lt;body&gt;
+            <strong>&lt;h1&gt;</strong>Olá Mundo!&lt;/h1&gt;
+            &lt;div <strong>id="container"</strong>&gt;
+                &lt;a <strong>class="subMenu"</strong> href="extra/blog.html" target="_blank">PROJETO 3 - Blog&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+    </pre>
+                </div>
+                <ul>
+                    <li><em class="destaque">Elemento:</em> Usado quando queremos aplicar a regra a um elemento HTLM. <br><br>
+                    <div class="codigo2">
+    <pre>
+        h1{
+            color: red;
+            }
+    </pre>
+                    </div>
+                    </li>
+                    <li><em class="destaque">Id:</em> Usado quando apenas um elemento deve receber o estilo definido na regra. <br><br>
+                        <div class="codigo2">
+    <pre>
+        #container{
+            background-color: #dedee4ec;
+            padding: 20px;
+            }
+    </pre>
+                        </div>
+                        </li>
+                    <li><em class="destaque">Classe:</em> Usamos a classe quando muitos elementos compartilham do estilo definido nessa regra. <br><br>
+                    <div class="codigo2">
+    <pre>
+        .subMenu{
+            list-style-type: circle;
+            padding-left: 10px;
+            }
+    </pre>
+                    </div>
+                    </li> <br><br>
+                    <li> Podemos também agrupar mais de um setor, para que a regra seja aplicada a todos: <br><br>
+                        <ul>
+                            <li>Agrupamento por elementos  <br><br>
+                                <div class="codigo2">
+            <pre>
+                h1,p,h3{
+                    color: red;
+                    }
+            </pre>
+                                </div>
+                            </li>
+                            <li>Agrupamento por descendência de elementos  <br><br>
+                                <div class="codigo2">
+            <pre>
+                div p{
+                    color: red;
+                    }
+            </pre>
+                                </div>
+                            </li>
+                            <li>Agrupamentos por classes (o elemento tem como atributo duas classes)  <br><br>
+                                <div class="codigo2">
+            <pre>
+                .menu.subMenu{
+                    list-style-type: circle;
+                    padding-left: 10px;
+                    }
+            </pre>
+                                </div>
+                            </li>
+                            <li>Agrupamento por descendência de classes (uma classe é interna a outra)  <br><br>
+                                <div class="codigo2">
+            <pre>
+                .menu .subMenu{
+                    list-style-type: circle;
+                    padding-left: 10px;
+                    }
+            </pre>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+            </p>
+            <p>
+                <em class="destaque">Width:</em> Usado para controlar a <strong>largura</strong> de um box. Para  ter um maior controle, podemos usar o width com os parâmetros abaixo:
+                            <ul>
+                                <li><strong>Min-width ou Max-width:</strong> Aqui definimos oa valor mínimo e máximo que uma página pode assumir.
+                                    <br><br>
+                                    <div class="codigo2">
+                            <pre>
+                                blockquote {
+                                    min-width: 200px;
+                                    max-width: 400px;
+                                }
+                            </pre>
+                                    </div>
+                                </li>
+                                <li><strong>Calc:</strong> Usando este parâmetro, o CSS vai fazer um cálculo para encontrar o valor da largura ou altura da caixa. O calc suporta operações matemáticas como soma, subtração, multiplicação e divisão. <br><br>
+                                    <div class="codigo2">
+                            <pre>
+                                blockquote {
+                                    width: calc(100%/2-100px);
+                                    }
+                            </pre>
+                                    </div>
+                                </li> <br>
+                                <li><strong>overflow:</strong> Esta propriedade é usada quando uma caixa precisa ter um tamanho menor que o espaço em que ela está. <br> Overflow pode ser customizado com dois valores principais:
+                                <ul>
+                                    <li>Hidden: Usando este valor, o conteúdo é cortado e fica oculto.</li>
+                                    <li>Scroll: Neste caso, uma barra de rolagem é apresentada para que o conteúdo excedente possa ser visto.</li>
+                                    <li>Além destes, também existem os valores <span class="destaque">auto</span> e <span class="destaque">visible</span>, padrão para a maioria dos elementos.</li>
+                                    <div>
+                                        <figure class="figureImg">
+                                            <img src="img/css-overflow1.jpg" width="" alt="css-overflow1">
+                                            <figcaption class="refImg">Fonte: https://www.cursoemvideo.com.br/</figcaption>
+                                        </figure>
+                                        <div class="codigo2">
+                            <pre>
+                                blockquote {
+                                    height: 29px;
+                                    overflow: hidden;
+                                }
+                            </pre>
+                                        </div>
+                                        <figure class="figureImg">
+                                            <img src="img/css-overflow2.jpg"  width="80%" alt="css-overflow2">
+                                            <figcaption class="refImg">Fonte: https://www.cursoemvideo.com.br/</figcaption>
+                                        </figure>
+                                        <div class="codigo2">
+                            <pre>
+                                blockquote {
+                                    height: 29px;
+                                    overflow: scroll;
+                                }
+                            </pre>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            </ul>
+                        <em class="destaque">Height:</em> Usado para controlar a <strong>altura</strong> de um box. Em algumas situações, quando é necessário um maior controle, usamos <span class="destaque">min-height </span> e <span class="destaque">max-height</span>
+            </p>
+            <p>
+                <em class="destaque">@font-face:</em> A propriedade @font-face do CSS3 para importar fontes (tipografia) externas para nossas páginas. Podemos usar uma fonte que não esteja disponível no <a class="link2" href="https://fonts.google.com/">Google Fontes</a> ou um arquivo personalizado de fonte.
+                <div class="codigo2">
+        <pre>
+            @font-face {
+                font-family: [nome];
+                src: url([caminho]);
+                }
+        </pre>
+                </div>
+            </p>
+            </div>  
+        </div>
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>
+colorir o codigo
+corrigir 
+https://ecstatic-shaw-7ceb62.netlify.app/livia

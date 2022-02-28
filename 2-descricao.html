@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=Inconsolata:wght@200&family=K2D:wght@200&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&&family=Inconsolata:wght@20family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Tenor+Sans&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=New+Tegomin&family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>HTML, CSS e JavaScript</title>
+</head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <h1 class="titleSecond">HTML, CSS e JavaScript</h1><br>
+        <div>
+            <img class="imgHome" src="img/html_css_javascript.png" alt="HTML">            
+        </div>
+        <div class="conteudo">
+            <p>
+                De maneira simples, podemos difinir HTML, CSS e JavaScript da seguinte maneira:
+                <ul>
+                    <li>O HTML, HyperText Markup Language, é a estrutura da página. 
+                        Como se fosse um corpo (esqueleto).</li>
+                    <li>O CSS, Cascading Style Sheets, é o que dá estilo aos códigos, permitindo criar a formatação desejada e gerar atratividade .
+                        Como se fosse a roupa que a pessoa utiliza.</li>
+                    <li>O Javascript é uma liguagem de programação, é ele que dá movimento e ação, criando a interação da página.
+                        Como se fosse o espírito do corpo.</li>
+                </ul>
+            </p>
+            <p>
+                <h3>Estrutura HTML:</h3>
+                <p>
+                    <div class="codigo">
+        <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="pt-br"&gt;
+            &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+                &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;
+                &lt;title&gt;Document&lt;/title&gt;
+            &lt;/head&gt;
+            &gt;body&gt;
+        
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </pre>
+                    </div>
+                    No exemplo acima:
+                    <ul class="lista">
+                        <li><code class="destaque">&lt;!DOCTYPE html&gt;</code>: Indicar que o documento está em HTML 5.</li>
+                        <li><code class="destaque">&lt;html lang="pt-br"&gt;</code>: indicar que o conteúdo do site será em Português do Brasil.</li>
+                        <li><code class="destaque">&lt;head&gt;</code>: É a área de configuração.</li>
+                        <li><code class="destaque">&lt;meta charset="UTF-8"&gt;</code>: Significa que o site é conpatível com acentuação.</li>
+                        <li><code class="destaque">&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code>: É exclusiva para IE, ela pode configurar a página para ser renderizada como em outra versão do Internet Explorer.</li>
+                        <li><code class="destaque">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>: Significa que o site vai ocupar 100% de tela e ser visualizado com 100%, sem zoom</li>
+                        <li><code class="destaque">&lt;meta http-equiv="refresh" content="30"&gt;</code>: Atualiza a página a cada 30 segundos</li>
+                        <li><code class="destaque">&lt;meta name="robots" content="noindex,nofollow"&gt;</code>:Essas metatags controlam o comportamento de rastreamento e indexação dos mecanismos de pesquisa.</li>
+                        <li><code class="destaque">&lt;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&gt;</code>: Aqui você coloca o Fivicon</li>
+                        <li><code class="destaque">&lt;title&gt;Document&lt;/title&gt;</code>: Título da página no navegador</li>
+                        <li><code class="destaque">&lt;body&gt;</code>: É onde fica o conteúdo do site.</li>
+                        <li>Temos outras diversas Metas TAG's usadas para inserir fivicons, arquivos de fonte, de estilo etc</li>
+                    </ul>
+                </p>
+                <h3>Estrutura em CSS</h3>
+                    <p>
+                        <div class="codigo">
+        <pre>
+            .codigo{
+                background-color: #fff;
+                color: #000;
+                padding-top: 5px;
+                width: 700px;
+            }
+        </pre>
+                        </div>
+                        No exemplo acima:
+                        <ul class="tag">
+                            <li><strong>.codigo</strong> é um seletor.</li>
+                            <li><strong>background-color: #fff;</strong>, é a declaração.</li>
+                            <li><strong>background-color:</strong> é a propriedade e</li>
+                            <li><strong>#fff</strong>, é o valor (neste caso em hexadecimal).</li>
+                        </ul>
+                    </p>
+                    
+                <h3>JavaScript</h3>
+                Para desativar o JavaScript do seu site ou para testarseu site sem o JavaScript, você precisa instalar uma extensão no Google Chrome chamada <a class="link" href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=pt-BR">Web Developer</a>. Depois basta clicar em Disable javaScript.
+            </p>
+        </div>
+    </div>
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>

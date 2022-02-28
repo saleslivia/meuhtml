@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Curso em Vídeo</title>
+    <style>
+        .voltarImg{
+            vertical-align: middle;
+            width: 15px;
+            margin-right: 5px;
+            }
+        .voltarLink{
+            text-decoration: none;
+            vertical-align: middle;
+            color: #000;
+            font-family: 'Tenor Sans', sans-serif;
+            }
+    </style>
+</head>
+<body>
+    <a class="voltarLink" href="../../index.html"><img class="voltarImg" src="../../img/voltar2.png" alt="voltar">Home</a>
+   
+    <h2>INSERINDO IMAGENS DINÂMICAS</h2>
+    <hr>
+    <P>
+        Tente abrir esse site em vários dispositivos diferentes, ou simplesmente aumente e diminua o tamanho do seu navegador.
+        <br><br>
+        <picture>
+            <!--caso a imagem seja grande demais para a página, o navegado altera ela automaticamente para o um tamanho menor ou maior-->
+            <source media="(max-width:740px)" srcset="imagens/img-p.png">
+            <source media="(max-width:1040px)" srcset="imagens/img-m.png">
+            <img src="imagens/img-g.png" alt="imagem flexivel">
+        </picture>
+    </P>
+   
+    <hr>
+    <br>
+    <p>
+        <a class="voltarLink" href="../../index.html"><img class="voltarImg" src="../../img/voltar2.png" alt="voltar">Home</a>
+    </p>
+</body>
+</html>
