@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --font1:Verdana, Geneva, Tahoma, sans-serif;
+    --font2:'Passion One', cursive;
+    --font3:'Sriracha', cursive;
+    
+}
+.voltarImg{
+    vertical-align: middle;
+    width: 15px;
+    margin-right: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+.voltarLink{
+    text-decoration: none;
+    vertical-align: middle;
+    color: #000;
+    font-family: 'Tenor Sans', sans-serif;
+    }
+    html,body{
+        min-height: 100vh;
+        background-color: #a9a9a9;
+        font-family: var(--font1);
+    }
+    header{
+        background-color: #000;
+        color: #ffffff;
+        text-align: center;
+    }
+    header>h1{
+        padding-top: 50px;
+        font-variant: small-caps;/*deixa tudo maiúsculo, mas com a primeira letra maior*/
+        font-family: var(--font2);
+        font-size: 9vw; /*a font aumenta e diminue de acordo com o tamanho da tela*/
+    }
+    header > p{
+        padding-bottom: 50px;
+    }
+    a{
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    section{
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        padding-left: 30px;
+        line-height: 1.5em;
+        font-family: var(--font3);
+        font-size: 3vw;
+    }
+    section.normal{
+        color: #000;
+        background-color: #ffffff;
+    }
+    section.imagem{
+        color: #ffffff;
+        background-color: #292828;
+        box-shadow: inset 6px 6px 13px 0px rgb(34, 33, 33); /*sombra para dentro*/
+        background-size: cover;
+        background-attachment: fixed;/*imagem de fundo fica fixa, o texto passa sobre ela*/
+    }
+    section.imagem>p{
+        background-color: #00000071;
+        width: 400px;
+        display: inline-block;
+        padding: 15px;
+        text-shadow: 1px 1px 0px #000;
+    }
+    section>p{
+        padding-bottom: 2em;
+    }
+    section#img01{
+        background-image: url('imagens/background001.jpg');
+        background-position: right center;
+    }
+    section#img02{
+        background-image: url('imagens/background002.jpg');
+        background-position: right center;
+    }
+    footer{
+        background-color: #000;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+    }
