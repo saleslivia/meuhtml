@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas em <HTML></HTML></title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-shadow: 1px 2px 3px gray;
+            text-align: center;
+            color: #9c0c29;
+            font-weight: bolder;
+        }
+        table{
+            width: 700px;
+            border-collapse: collapse;/*Tira o espaço entre uma borda e outra da tabela*/
+            
+        }
+        th{
+            font-size: 18px;
+        }
+        td, th{
+            border: 1px solid #000000;
+            padding: 5px;
+        }
+        thead, tfoot{
+            background-color: #034603;
+            color: #ffffff;
+        }
+        caption{
+            font-size: 25px;
+            font-weight: bold;
+            color: #0e110e;
+            font-variant: small-caps; /*deixa tudo maiúsculo, mas com a primeira letra maior*/
+            padding: 10px;
+            background-color: #337733c5 ;
+        }
+        td.populacao{
+            text-align: right;
+        }
+        td.percent{
+            text-align: center;
+        }
+        td.MG{
+            font-weight: 500;
+        }
+        td.MG:hover{
+            color: rgb(22, 22, 179);
+            font-weight: 500;
+            font-size: 2.6vh;
+        }
+        tbody>tr:nth-child(2n){
+            background-color: #bff5d7b7;
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <h1>Trabalhando com tabela semântica em HTML</h1>
+        <hr>
+    </head>
+    <main>
+        <table>
+            <caption>Estados do Brasil por população</caption>
+            <thead>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
+                <th scope="col">% da População</th>
+                <th scope="col">País comparável</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="populacao">46 649 132</td>
+                    <td class="percent">21,9%</td>
+                    <td>Espanha (46 439 864)</td>
+                </tr>
+                <tr>
+                    <td class="MG">Minas Gerais</td>
+                    <td class="populacao MG">21 411 923</td>
+                    <td class="percent MG">10,1%</td>
+                    <td class="MG">Sri Lanka (20 675 000)</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="populacao">17 463 349</td>
+                    <td class="percent">8,2%</td>
+                    <td>Países Baixos (16 922 900)</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="populacao">14 985 284</td>
+                    <td class="percent">7,1%</td>
+                    <td>Chade (14 037 000)</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="populacao">11 597 484</td>
+                    <td class="percent">5,4%</td>
+                    <td>Bolívia (11 410 651)</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="populacao">11 466 630</td>
+                    <td class="percent">5,4%</td>
+                    <td>Bélgica (11 250 659)</td>
+                </tr>
+                <tr>
+                    <td> Pernambuco</td>
+                    <td class="populacao">9 674 793</td>
+                    <td class="percent">4,5%</td>
+                    <td>Bielorrússia (9 485 300)</td>
+                </tr>
+                <tr>
+                    <td>Ceará</td>
+                    <td class="populacao">9 240 580</td>
+                    <td class="percent">4,3%</td>
+                    <td>Emirados Árabes Unidos (9 157 000)</td>
+                </tr>
+                <tr>
+                    <td>Pará</td>
+                    <td class="populacao">8 777 124</td>
+                    <td class="percent">4,1%</td>
+                    <td>Áustria (8 602 112)</td>
+                </tr>
+                <tr>
+                    <td>Santa Catarina</td>
+                    <td class="populacao">7 338 473</td>
+                    <td class="percent">3,4%</td>
+                    <td>Sérvia (7 114 393)</td>
+                </tr>
+                <tr>
+                    <td>Goiás</td>
+                    <td class="populacao">7 206 589</td>
+                    <td class="percent">3,4%</td>
+                    <td> Paraguai (7 003 406)</td>
+                </tr>
+                <tr>
+                    <td>Maranhão</td>
+                    <td class="populacao">7 153 262</td>
+                    <td class="percent">3,4%</td>
+                    <td>Paraguai (7 003 406)</td>
+                </tr>
+                <tr>
+                    <td>Amazonas</td>
+                    <td class="populacao">4 269 995</td>
+                    <td class="percent">2,0%</td>
+                    <td>Líbano (4 168 000)</td>
+                </tr>
+                <tr>
+                    <td>Espírito Santo</td>
+                    <td class="populacao">4 108 508</td>
+                    <td class="percent">1,9%</td>
+                    <td>Líbano (4 168 000)</td>
+                </tr>
+                <tr>
+                    <td>Paraíba</td>
+                    <td class="populacao">4 059 905</td>
+                    <td class="percent">1,9%</td>
+                    <td>Líbano (4 168 000)</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">Total População: </th>
+                    <td class="percent">181.343.126</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
