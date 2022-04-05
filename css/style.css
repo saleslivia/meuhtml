@@ -63,14 +63,15 @@ h1.titleSecond{
 }
 .w40{
   width: 500px;
+  
 }
 .w40>a{
   display: none;
-  transition: 0.5s ease-out;
+  transition: 0.9s ease-out;
 }
 .w40:hover>a{
   display: block;
-  transition: 0.8s ease-out;
+  transition: 1.0s ease-out;
 }
 /*.indice{
   height: 100vh;
@@ -83,6 +84,7 @@ h1.titleSecond{
   font-family: 'Lato', sans-serif;
   font-family: 'New Tegomin', serif;
   font-family: 'Tenor Sans', sans-serif;
+  
 }
 /*.none{
   display: none;
@@ -98,6 +100,7 @@ h1.titleSecond{
   font-size: x-large;
   padding: 10px;
   color: #800505;
+  transition: 2.0s ease-out;
 }
 .subMenu{
   text-decoration: none;
@@ -113,7 +116,7 @@ h1.titleSecond{
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  font: normal 16px Arial;
+font: normal 16px Arial;
   padding-left: 20px;
   margin: auto;
   color: darkblue;

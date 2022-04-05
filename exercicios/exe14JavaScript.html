@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o prompt</title>
+    <style>
+        .voltarImg{
+            vertical-align: middle;
+            width: 15px;
+            margin-right: 5px;
+            }
+        .voltarLink{
+            text-decoration: none;
+            vertical-align: middle;
+            color: #000;
+            font-family: 'Tenor Sans', sans-serif;
+            }
+    </style>
+</head>
+<body>
+    <a class="voltarLink" href="../index.html"><img class="voltarImg" src="../img/voltar2.png" alt="voltar">Home</a>
+       <hr>
+    <p>Hello Word</p>
+    <!--indicar que é JavaScript-->
+    <script>
+        var nome= window.prompt('Qual é o seu nome?')
+        document.write(`Olá, ${nome}. Seu nome tem ${nome.length} letras!<br>`)
+        document.writeln(`${nome}, seu nome em maiúculo é ${nome.toUpperCase()}!<br>`)
+        document.writeln(`E seu nome em minúsculo é ${nome.toLowerCase()}.`)
+    </script>
+</body>
+</html>

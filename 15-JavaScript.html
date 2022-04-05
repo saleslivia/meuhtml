@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="assets/javascript.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Principais Comandos em JavaScript</title>
+    </head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <br>
+        <h1 class="titleSecond">Principais Comandos em JavaScript</h1><br>
+        <div>
+            <img class="imgHome" src="assets/javascript.png" alt="TAG">            
+        </div>
+        <div class="conteudo">
+            <ul class="lista">
+                <li>Comando para exibir um <span class="destaque">Alerta</span> na tela: <br><br>
+                    <ul class="subLista">
+                        <li>window.alert('Minha primeira mensagem'): exibe um popup com um alerta na tela.</li>
+                        <li>window.confirm('Está gostando do curso?'): exibe um popup com um alerta na tela e pede uma confirmação (pode dar Ok ou Cancelar).</li>
+                        <li>window.prompt('Qual é seu nome?'): Interação com o usuário. Exibe um alerta com um formulário a ser preenchido. O valor retornado é sempre uma string.</li>
+                    </ul>
+                </li>
+                <li> Usando o Node.js
+                    <ul class="subLista">
+                        <li>
+                            Para abrir no Node.js no Visual Studio Code, basta clicar em Terminal>Novo terminal, logo em seguida, digite <code class="destaque">node</code>.
+                            
+                        </li>
+                        <li>
+                            Para limpar o terminar, basta dar o comando <code class="destaque">ctrl+l</code>.
+                        </li>
+                        <li>
+                            No JavaScript existem 3 tipos primitivos de dados mais usados:
+                            <ul>
+                                <li>Number: que pode ser <span class="destaque">infinity</span> ou <span class="destaque">NaN</span> (not a number).</li>
+                                <li>String </li>
+                                <li>Boolean </li>
+                                <li>Outros tipo: <span class="destaque">null</span>, <span class="destaque">undefined</span>, <span class="destaque">object</span>, <span class="destaque">array</span> (que é um object) e <span class="destaque">function</span>.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            No JavaScript, para trabalhar com os tipo acima, usamos o comando <code class="destaque">typeof</code>.
+                        </li>
+                        O símbolo '<span class="destaque">+</span>' pode ter duas interpretações dentro do JavaScript:
+                            <ul>
+                                <li>Somar: (number+number)</li>
+                                <li>Concatenar: (string+string).</li>
+                            </ul>
+                        Para usar a função de soma, é necessário transformar o valor recebido em um número. Para isso, usamos o <code class="destaque">Number.parseInt</code> (inteiro) ou o <code class="destaque">Number.parsefloat</code>(real) antes de receber o valor ou ainda <code class="destaque">Number</code>, para deixar o sistema definir, de acordo com o valor fornecido, se é um número inteiro ou real: <br>
+    <pre>
+        &lt;/script&gt;
+            var n1=Number.parseInt (window.prompt("Digite o primeiro número: "));
+        &lt;/script&gt;
+    </pre>
+                        <li>
+                            Para converter número para string, basta usar <code class="destaque">String(objeto a ser convertido)</code>.
+                        </li>
+                        <li>
+                            Nas versões mais recentes do JavaScript existe uma maneira mais fácil de trabalhar com concatenação de strings. O nome dessa técnica é <span class="destaque">Template Strings</span>, que é um formatador de strings. <br>
+                            EX: <br>
+    <pre>
+        &lt;script&gt;
+            var n1=Number (window.prompt("Digite o primeiro número: "))
+            var n2=Number (window.prompt('Digite o segundo número: '))
+            var soma=n1+n2
+            window.alert(`O valor da soma de ${n1}+${n1}=${soma}`)
+        &lt;/script&gt;
+    </pre>
+                        </li>
+                        <li>
+                            Outras funções que podemos usar para formatar string são: <br>
+                            var s='JavaScript'
+                            <ul>
+                                <li>s.length: conta quantos caracteres tem na string.</li>
+                                <li>s.toUpperCase(): joga a string toda para letras maiúsculas.</li>
+                                <li>s.toLowerCase(): joga a string toda para letras minúsculas.</li>
+                            </ul>
+    <pre>
+        &lt;script&gt;
+            var nome= window.prompt('Qual é o seu nome?')
+            document.write(`Olá, ${nome}. Seu nome tem ${nome.length} letras!&lt;br&gt;`)
+            document.writeln(`${nome}, seu nome em maiúculo é ${nome.toUpperCase()}!&lt;br&gt;`)
+            document.writeln(`E seu nome em minúsculo é ${nome.toLowerCase()}.`)
+        &lt;/script&gt;
+    </pre>
+                        </li>
+                        <li>
+                            Podemos também formatar números. Para isso usamos o <span class="destaque">toFixed</span>, que determina quantas casas depois da vírgula vai ter.
+    <pre>
+        &lt;script&gt;
+            var n1.=1545.2
+            document.write(`O número ${n1} convertido é: ${n1.toFixed(2)}`)
+        &lt;/script&gt;
+    </pre>
+                        Também é possível usar o <span class="destaque">replace</span>, que altera uma senteça por outra.
+    <pre>
+        &lt;script&gt;
+            var n1.=1545.2
+            document.write(`O número ${n1} convertido é: ${n1.toFixed(2).replace('.',',')}`)
+        &lt;/script&gt;
+    </pre>
+                        Para converter número em moeda, usamos o <span class="destaque">toLocaleString</span>. Essa sentença pode ser usada para moeda de qualquer país (USD, EUR, BRL etc.).
+    <pre>
+        &lt;script&gt;
+            var n1.=1545.2
+            document.write(`O número ${n1} em real é: ${n1.toLocaleString('pt-BR',{'currency', currency:'BRL'})}`)
+        &lt;/script&gt;
+    </pre>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Usando Operadores:
+                    <ul>
+                        <li>Aritméticos: '+', '-', '*', '/', '%', '**'. A ordem de precedência é: <br>
+                            () <br> ** <br> *, /, % <br> +, -. <br><br> EX: <br>
+                            5+2=7 <br>
+                            5-2=3 <br>
+                            5*2=10 <br>
+                            5/2=2,5 <br>
+                            5%2=1 <br>
+                            5**2=25 (potência) <br><br>
+                        </li>
+                        <li>Atribuição: </li>
+                        <li>Relacionais: </li>
+                        <li>Lógicos: </li>
+                        <li>Ternário: </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>   
+    </div>
+    <a class="voltarLink" href="index.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>
