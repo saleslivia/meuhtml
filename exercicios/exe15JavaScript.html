@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Multa de Trânsito</title>
+    <style>
+        .voltarImg{
+            vertical-align: middle;
+            width: 15px;
+            margin-right: 5px;
+            }
+        .voltarLink{
+            text-decoration: none;
+            vertical-align: middle;
+            color: #000;
+            font-family: 'Tenor Sans', sans-serif;
+            }
+            div.exe{
+                padding: 30px;
+                margin: 20px;
+            }
+            div.multa{
+                background-color: rgb(183, 183, 241);
+            }
+            div.pais{
+                background-color: rgb(199, 173, 241);
+            }
+    </style>
+</head>
+<body>
+    <a class="voltarLink" href="../index.html"><img class="voltarImg" src="../img/voltar2.png" alt="voltar">Home</a>
+    <hr>
+    <div class="exe multa">
+        <h2>Sistema de Multas</h2>
+        Velocidade do Carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+        <input type="button" value="Verificar" onclick="calcular()">
+        <div id="res"></div>
+        <script>
+            function calcular(){
+                var txtv=window.document.querySelector('input#txtvel')
+                var res=window.document.querySelector('div#res')
+                var vel=Number(txtv.value)
+                res.innerHTML= `<p>Sua velocidade é de <strong>${vel}</strong>Km/h</p>`
+                if(vel>60){
+                    res.innerHTML+= `<p>Sua velocidade está acima do permitido. Você será <strong>multado</strong>!</p>`
+                }else{
+                    res.innerHTML+=`Parabéns. Você está dentro da velocidade permitida!`
+                }
+                res.innerHTML+=`<p>Dirija sempre com o cinto de segurança!</p>`
+            }    
+        </script>
+    </div>
+    <hr>
+    <div class="exe pais">
+        <h2>Sua Nacionalidade</h2>
+        Informe de qual país você é: <input type="text" name="txtpais" id="txtpais">
+        <input type="button" value="Verificar" id="verificar" onclick="testar()">
+        <div id="res2"></div>
+        <script>
+            function testar(){
+                var pais=window.document.querySelector('input#txtpais')
+                var res2=window.document.querySelector('div#res2')
+                var pais2=String(pais.value)
+                res2.innerHTML = `<p>Seu paí é <strong>${pais2}</strong>.</p>`
+                if(pais2=='Brasil'){
+                    res2.innerHTML+=`<p>Você é brasileiro!</p>`
+                }else{
+                    res2.innerHTML+=`<p>Você é estrangeiro!</p>`
+                }
+                
+            }
+        </script>
+    </div>
+</body>
+</html>
