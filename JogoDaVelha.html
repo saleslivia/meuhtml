@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <style type="text/css">
+        .caseGame{
+            background-color: #2d95d1;
+            width: 200px;
+            height: 200px;
+            font-size: 120px;
+            color: #ff0000;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+    <script language="javascript" type="text/javascript">
+        letra = "X";
+        function joga(){
+
+        }
+        function joga(celula){
+            celulaclicada = document.getElementById(celula).innerHTML;
+            if(celulaclicada=="X" || celulaclicada=="O"){
+                alert("Olá, esta célula já foi clicada");
+            }else{
+                document.getElementById(celula).innerHTML=letra;
+            if(letra=="X"){
+                letra="O";
+            }else{
+                letra="X"
+            }
+        }
+    }
+    function ver(){
+        c11=document.getElementById('celula11').innerHTML;
+        c12=document.getElementById('celula12').innerHTML;
+        c13=document.getElementById('celula13').innerHTML;
+        c21=document.getElementById('celula21').innerHTML;
+        c22=document.getElementById('celula22').innerHTML;
+        c23=document.getElementById('celula23').innerHTML;
+        c31=document.getElementById('celula31').innerHTML;
+        c32=document.getElementById('celula32').innerHTML;
+        c33=document.getElementById('celula33').innerHTML;
+    }
+
+    </script>
+</head>
+<body>
+    <h1>Jogo da Velha</h1>
+    <table>
+        <tr>
+            <td id="celula11" class="caseGame" onclick="joga(this.id);"></td>
+            <td id="celula12" class="caseGame" onclick="joga(this.id);"></td>
+            <td id="celula13" class="caseGame" onclick="joga(this.id);"></td>
+        </tr>
+
+        <tr>
+            <td id="celula21" class="caseGame" onclick="joga(this.id);"></td>
+            <td id="celula22" class="caseGame" onclick="joga(this.id);"></td>
+            <td id="celula23" class="caseGame" onclick="joga(this.id);"></td>
+        </tr>
+
+        <tr>
+            <td id="celula31" class="caseGame" onclick="joga(this.id);"></td>
+            <td id="celula32" class="caseGame" onclick="joga(this.id);"></td>
+            <td id="celula33" class="caseGame" onclick="joga(this.id);"></td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" value="Novo Jogo">
+</body>
+</html>
