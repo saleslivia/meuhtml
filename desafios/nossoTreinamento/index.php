@@ -1,37 +1,21 @@
 <?PHP
     include('cabecalho.php');
 ?>
-            <form action="" method="get">
-                <div>
-                    <label for="iNome">Nome: </label>
-                    <input type="text" name="nome" id="iNome">
-                </div>
-                <br>
-                <div>
-                    <label for="iData">Data de nascimento: </label>
-                    <input type="date" name="data" id="iData">
-                </div>
-                <br>
-                <div>
-                    <label for="iEmail">E-mail: </label>
-                    <input type="email" name="email" id="iemail">
-                </div>
-                <br>
-                <div>
-                    <label for="sexo">Sexo:</label>
+            <div class="d-flex justify-content-center">
+                <form action="bemVindo.php" method="POST">
+                    <div class="mb-3">
+                        <label for="iUsuario">Usuário: </label>
+                        <input type="text" name="usuario" id="iUsuario" class="form-control">
+                    </div>
                     <br>
-                    <input type="radio" name="genero" id="iFeminino">
-                    <label for="iFeminino">Feminino</label>
+                    <div class="mb-3">
+                        <label for="iSenha">Senha: </label>
+                        <input type="password" name="senha" id="iSenha" class="form-control">
+                    </div>
                     <br>
-                    <input type="radio" name="genero" id="iMasculino">
-                    <label for="iMasculino">Masculino</label>
-                    <br>
-                    <input type="radio" name="genero" id="iNaoDeclarado">
-                    <label for="iNaoDeclarado">Não Declarado</label>
-                </div>
-                <br>
-                <button type="submit" id="iEnviar">Enviar</button>
-            </form>
+                    <button type="submit" id="iEnviar" class="btn btn-primary">ENTRAR</button>
+                </form>
+            </div>
 <?PHP
     include('rodape.php');
 ?>
