@@ -1,6 +1,5 @@
-<?php
-    include('cabecalho.php');
-?>
+<?php $titulo = "Switch, substr, implode e explode";
+    include('cabecalho.php');?>
  <div>
      <form action="resulDadosPessoais.php" method='POST'>
         <fieldset>

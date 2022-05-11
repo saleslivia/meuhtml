@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <title>Treinamento Dev</title>
+    <style>
+        .treino{
+            font-size: <?php echo "$tamanho". "px"; ?>;
+            color: <?php echo $cor; ?>;
+            text-align: <?php echo $alinhamento; ?>;
+            font-weight: <?php echo $negrito; ?>;
+            font-style: <?php echo $italico;?>;
+            text-decoration: <?php echo $sublinhado;?>;
+        }
+    </style>
 </head>
 <body>
     <div id="container">
         <div class="topo">
-            <h1>TREINANDO SEU PHP - Lívia</h1>
+            <h1>TREINANDO MEU PHP - Lívia - <?php echo $titulo?> </h1>
         </div>
         <div class="conteudo">
