@@ -5,15 +5,10 @@
     $nomeProduto = $_GET['nomeProduto'];
     $preco = $_GET['preco'];
 
-    function cadastraProduto($con, $nome, $preco){
-        $query = "insert into produtos2 (nome,preco) values ('{$nome}','{$preco}');";
-        return mysqli_query($con,$query);
-    }
-
     $conexao = mysqli_connect('localhost', 'root', '', 'loja2');
-    
+    $query = "insert into produtos2 (nome,preco) values ('{$nomeProduto}','{$preco}');";
 
-    if (cadastraProduto($conexao,$nomeProduto, $preco)){
+    if (mysqli_query($conexao,$query)){
         ?>
         <p class="alert-success">
         <strong>O produto:</strong> <?=$nomeProduto;?>
@@ -31,7 +26,7 @@
         <?php 
     }
     
-    //mysqli_close($conexao);
+    mysqli_close($conexao);
 
 ?>
 

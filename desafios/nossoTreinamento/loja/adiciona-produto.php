@@ -1,14 +1,30 @@
-<?php include('cabecalho.php');?>
+<?php include('cabecalho.php');
+    include('querys.php'); ?>
 
 <?php
-   $nomeProduto = $_GET['nomeProduto'] ? $_GET['nomeProduto'] : "Produto não informado";
-   $preco = $_GET['preco'] ? $_GET['preco'] : 0;
+   $nomeProduto = $_GET['nomeProduto'];
+   $preco = $_GET['preco'];
+
+      
+
+    if (insereProduto($conexao, $nomeProduto, $preco)) {
+        ?>
+        <p class="alert-success">
+            <strong>Produto:</strong> <?=$nomeProduto?>
+            <br>
+            <strong>Preço:</strong> <?=$preco?>
+            <br><br>
+            Adicionado com sucesso!
+        </p>
+    <?php
+    } else{
+        ?>
+        <div class="alert alert-danger" role="alert">
+            <strong>O produto <?=$nomeProduto?> não foi cadastrado! </strong>
+        </div>
+    <?php
+    }
+    // mysqli_close($conexao); //fecha conexão com o BD
    ?>
-    <p class="alert-success">
-        <strong>Produto:</strong> <?=$nomeProduto;?>
-        <br>
-        <strong>Preço:</strong> <?=$preco;?>
-        <br><br>
-        Adicionado com sucesso!
-    </p>
+    
 <?php include('rodape.php');?>
