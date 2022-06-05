@@ -1,0 +1,16 @@
+body{
+    padding-top: 50px;
+}
+h1{
+    padding-bottom: 50px;
+}
+.principal{
+    text-align: center;
+    padding: 40px 15px;
+}
+nav{
+    padding-left: 20px;
+}
+img{
+    max-width: 60%;
+}

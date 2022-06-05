@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Não ordenadas</title>
+    <style>
+        ul{
+            color:rgb(85, 0, 255);
+            font-size: 20px;
+        }
+        ul.interno1{
+            color: red;
+            font-family:'Courier New', Courier, monospace;
+            font-size: small;
+        }
+        ul.interno2{
+            color: rgb(8, 59, 42);
+            font-size: 12px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <ul type="circle">
+        <li>Xbox
+            <ul class="interno1" type="square">
+                <li>Forza Horizon
+                    <ul class="interno2">
+                        <li>DVD</li>
+                        <li>Download</li>
+                    </ul>
+                </li>
+                <li>Hallo</li>
+            </ul>
+        </li>
+        <li>PlayStation
+            <ul class="interno1" type="square">
+                <li>Bully</li>
+                <li>BombaPatch</li>
+            </ul>
+        </li>
+        <li>Super Nitendo
+            <ul class="interno1" type="square">
+                <li>Super Mario</li>
+                <li>Bomberman</li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>

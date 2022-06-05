@@ -16,27 +16,6 @@
             font-style: <?php echo $italico;?>;
             text-decoration: <?php echo $sublinhado;?>;
         }
-        /* div.circulo{
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: <?php echo $cor; ?> ; 
-            margin: 10px;
-            text-align:center;
-            align-content:center;
-            display:inline-grid;
-            color: #eee;
-        }
-        div.quadrado{
-            width: 40px;
-            height: 40px;
-            background-color: <?php echo $cor; ?>;
-            margin: 10px;
-            text-align:center;
-            align-content:center;
-            display:inline-grid;
-            color: #eee;
-        }  */
     </style>
 </head>
 <body>

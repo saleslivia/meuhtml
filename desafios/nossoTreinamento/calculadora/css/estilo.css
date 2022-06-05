@@ -45,25 +45,3 @@ label{
     color: #853842;
     font-weight: bold;
 }
-
-div.circulo{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    /* background-color: #066c4a;  */
-    margin: 10px;
-    text-align:center;
-    align-content:center;
-    display:inline-grid;
-    color: #eee;
-}
-div.quadrado{
-    width: 40px;
-    height: 40px;
-    /* background-color: #066c4a;  */
-    margin: 10px;
-    text-align:center;
-    align-content:center;
-    display:inline-grid;
-    color: #eee; 
-}

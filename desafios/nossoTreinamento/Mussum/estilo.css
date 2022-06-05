@@ -1,0 +1,24 @@
+body{
+    background-color:  #b5c5e9;
+    font-family: 'Inter', sans-serif;
+}
+
+div.content{
+    width: 600px;
+    height: 600px;
+    background-color:#29427A;
+    padding: 30px 70px;
+    align-items: center;
+    margin: 30px auto;
+    font-size: 25px;
+    /* text-align: justify; */
+}
+h1{
+    color: #eee;
+    margin-bottom: 55px;
+    font-size: 45px;
+    font-weight: bold;
+}
+p{
+    color: #eee;
+}

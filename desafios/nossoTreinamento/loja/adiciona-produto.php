@@ -5,8 +5,6 @@
    $nomeProduto = $_GET['nomeProduto'];
    $preco = $_GET['preco'];
 
-      
-
     if (insereProduto($conexao, $nomeProduto, $preco)) {
         ?>
         <p class="alert-success">
@@ -18,9 +16,11 @@
         </p>
     <?php
     } else{
+        $msg = mysqli_error($conexao);
         ?>
         <div class="alert alert-danger" role="alert">
-            <strong>O produto <?=$nomeProduto?> não foi cadastrado! </strong>
+            <strong>O produto <?=$nomeProduto?> não foi cadastrado! </strong> <br>
+            <?= $msg; ?>
         </div>
     <?php
     }

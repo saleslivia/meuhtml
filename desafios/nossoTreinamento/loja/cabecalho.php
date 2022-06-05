@@ -23,6 +23,9 @@
                         <a class="nav-link" href="produto-formulario.php">Adicionar Produto</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="lista-produtos.php">Listar Produto</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Sobre</a>
                     </li>
                     <li class="nav-item">
