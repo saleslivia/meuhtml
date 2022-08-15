@@ -1,6 +1,6 @@
 <?php include('cabecalho.php');?>
     <form action="cadastrar-aluno.php" method="get">
-        <h1>Cadatrar Aluno</h1>
+        <h1>Cadastrar Aluno</h1>
         <div class="row mb-3 d-flex justify-content-center">
             <label for="iMatricula" class="col-form-label col-md-3">Matrícula do aluno:</label>
             <div class="col-md-5">
