@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>CSS</title>
+</head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index-aulas.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <br>
+        <h1 class="titleSecond"> CSS - Cascading Style Sheets </h1><br>
+        <div>
+            <img class="imgHome" src="img/css.jpg" alt="css">            
+        </div>
+        <div class="conteudo2">
+            <p>
+                <h3>- Posicionamento</h3>
+                <h4>Níveis das caixas</h4>
+                As caixas que envolvem um elemento pode ser de nível <span class="destaque">block</span> ou <span class="destaque">inline</span>.
+                <ul>
+                    <li><strong>Block (bloco):</strong> As caixas de nível bloco sempre se iniciam em uma nova linha e por padrão ocupam todo o espaço horizontal disponível. <br>
+                    Ex: <code class="destaque">&lt;h1&gt;</code>, <code class="destaque">&lt;blockquote&gt;</code>, <code class="destaque">&lt;address&gt;</code>, <code class="destaque">&lt;li&gt;</code>, <code class="destaque">&lt;pre&gt;</code>, <code class="destaque">&lt;p&gt;</code>, <code class="destaque">&lt;nav&gt;</code>, <code class="destaque">&lt;table&gt;</code>, etc.</li> <br><br>
+                    <li><strong>Inline (linha):</strong> As caixas de linha se adaptam ao fluxo de texto que as envolve. <br>
+                        Ex: <code class="destaque">&lt;code&gt;</code>, <code class="destaque">&lt;span&gt;</code>, <code class="destaque">&lt;a&gt;</code>, <code class="destaque">&lt;strong&gt;</code>, <code class="destaque">&lt;small&gt;</code>, <code class="destaque">&lt;cite&gt;</code>, <code class="destaque">&lt;label&gt;</code>, <code class="destaque">&lt;button&gt;</code>, etc.</li>
+                </ul>
+                <h4>Posicionando elementos</h4>
+                Existem duas propriedades que nos permitem posicionar elementos: <span class="destaque">position</span> e <span class="destaque">float</span>.
+                <ul>
+                    <li><strong>position:</strong> Pode receber 4 valores:
+                    <ul>
+                        <li>Fluxo normal (static): É o modelo de posicionamento padrão. Nele os elementos de bloco passarão a iniciar em uma nova linha, empurrando os demais para baixo. Quando o parâmetro é relative, usamos outras 4 propriedades para configurar o posicionamento: <span class="destaque">top</span>, <span class="destaque">bottom</span>left</span>, <span class="destaque"> e <span class="destaque">right</span>.
+                            <div class="codigo2">
+    <pre>
+        position: static;
+    </pre>
+                            </div>
+                        </li>
+                        <li>Posicionamento relativo: O elemento pode ser movido para cima, baixo, esquerda ou direita tendo como ponto de partida a sua posição no fluxo normal, sem afetar os elementos à sua volta.<br><br>
+                            <div class="codigo2">
+    <pre>
+        p {
+            left: 25px;
+            position: relative;
+            top: 25px;
+        }
+    </pre>
+                            </div>
+                        </li>
+                        <li>Posicionamento absoluto: O elemento é removido do fluxo normal e os elementos em volta se comportam como se não houvesse esse elemento reposicionado.
+                            <div class="codigo2">
+    <pre>
+        h3 {
+            right: 0;
+            position: absolute;
+            top: 0;
+        }
+    </pre>
+                            </div>
+                        </li>
+                        <li>Posicionamento fixo: Essa é uma forma de posicionamento absoluto, mas o elemento não se move quando o usuário utiliza as barras de rolagem da janela do navegador.
+                            <div class="codigo2">
+    <pre>
+        h1 {
+            left: 25px;
+            position: fixed;
+            top: 25px;
+        }
+    </pre>
+                            </div>
+                        </li>
+                    </ul></li>
+                    <li><strong>float:</strong> É usado quando é necessário criar colunas. Usamos esta propriedade junto com os valores left e right.
+                        <figure class="figureImg">
+                            <img src="img/css-float.PNG" alt="css-float">
+                            <figcaption class="refImg">https://www.devmedia.com.br/view/viewaula.php?idcomp=40900</figcaption>
+                        </figure><br>
+                        Nesse modelo de posicionamento o elemento sai do fluxo normal e é posicionado totalmente a esquerda ou à direita do contêiner que o contém.
+                        <div class="codigo2">
+    <pre>
+        h1 {
+            float: right;
+            width: 200px;
+            }
+    </pre>
+                        </div> 
+                        Para criar um texto em duas colunas, basta mover um dos elementos para a direita e outro pra a esquerda.
+                        <div class="codigo2">
+    <pre>
+        h3 {
+            float: left;
+            width: 200px;
+            }
+            
+            ul {
+            float: right;
+            width: 200px;
+            }
+    </pre>
+                        </div>
+                        <figure class="figureImg">
+                            <img src="img/css-float2.png" alt="css-float2">
+                            <figcaption class="refImg">https://www.devmedia.com.br/view/viewaula.php?idcomp=40994</figcaption>
+                        </figure>
+                        Para resolver problemas da altura de zero pixel:
+                        <div class="codigo2">
+    <pre>
+        div {
+            border: 1px solid #000;
+            overflow: auto;
+            width: 100%;
+        }
+    </pre>
+                        </div>
+                    </li>
+                    <li><strong>Z-Index:</strong> A propriedade z-index trabalha com um eixo Z, responsável pelo cálculo e posicionamento da profundidade de algum elemento (determinar se o elemento estará mais próximo ou mais afastado da tela). <br>
+                    Por padrão, cada elemento recebe um Z-index incremental. O elemento que tem o maior Z-index é o que fica visível. Dessa forma, podemos trabalhar com sobreposição ou transição de elementos. <br>
+                    No exemplo abaixo, a caixa de cor verde irá se sobrepor às demais.
+                    <div class="codigo2">
+<pre>
+    &lt;style&gt;
+        #posiciona1{
+            background-color: #F00;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top:40px;
+        }
+        #posiciona2{
+            background-color: #0F0;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top:65px;
+            z-index:4;
+        }
+        #posiciona3{
+            background-color: #00F;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top:100px;
+        }
+    &lt;/style&gt;
+
+</pre>
+                    </div>
+                    </li> 
+                </ul>
+            </p>
+        </div>  
+        </div>
+    <a class="voltarLink" href="index-aulas.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>

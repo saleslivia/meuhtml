@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="30">-->
+    <link rel="shortcut icon" href="assets/javascript.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=K2D:wght@200&family=Molengo&family=Montserrat:wght@200&family=Raleway:wght@100;200&family=Reem+Kufi&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>DOM</title>
+    <style>
+        div.guanabara{
+            background-color: #559df0;
+            color: #ffffff;
+            font: normal 15pt Arial;
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+    </style>
+    </head>
+<body class="homeSecond">
+    <a class="voltarLink" href="index-aulas.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+    <div class="container">
+        <br>
+        <h1 class="titleSecond">DOM - Document Objetc Model</h1><br>
+        <div>
+            <img class="imgHome" src="assets/domjs.jpg" alt="TAG">            
+        </div>
+        <div class="conteudo">
+            <p>
+                O DOM (Document Object Model) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na Web. Ele é utilizado pelo navegador Web para representar a sua página Web,  uma interface que representa como os documentos HTML e XML são lidos pelo seu browser e permite o tratamento de componentes visuais.
+            </p>
+            <div class="guanabara">
+                <h2>Exercícios do Professor Guanabara</h2>
+                <p>Aqui vai o resultado!</p>
+                <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+                <div>Clique em mim</div> <br>
+                <script>
+                    window.document.write('- EXEMPLOS DE MANIPULAÇÃO DOM <br>')
+                    window.document.write('O Charset do documento é: '+ window.document.charset +'<br>');
+                    window.document.write('O navegador usado é o: ' + window.navigator.appName + '<br>');
+                    window.document.write('Minha URL é: ' + window.document.URL +'<br><br>')
+                    window.document.write('- USANDO TAGNAME <br>')
+                    var p1=window.document.getElementsByTagName('p') [1]
+                    window.document.write('Está escrito assim: '+ p1.innerText)
+                    p1.style.color = 'blue'
+                </script>
+
+            </div> 
+            <div>
+                <p>Abaixo temos a resentação da árvore DOM do Exercício acima:</p>
+                <img class="imgHome" src="assets/arvore-dom-js.jpg" alt="representacao da arvore DOM">
+                <br>
+                <p>
+                    Onde: <br>
+                    <ul>
+                        <li>window: É a Raiz, tudo está dentro da window. Cada janela do seu navegador é uma window.</li>
+                        <li>location: É um objeto dentro da window. É a url do site (págin anterior, próxima, etc.).</li>
+                        <li>document: Documento atual.</li>
+                        <li>history: Histórico da navegação do seu site, de onde você veio, pra onde você vai, etc.</li>
+                        <li>html: Estrutura HTML do site.</li>
+                        <li>head: Filho de html e pai de meta, title, etc</li>
+                        <li>body: Filho de html e pai de h2, p, div, etc</li>
+                        <li>p: dentro do P ainda tem um strong. </li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <p>
+                    Como foram exibidas as informações apresentadas no <span class="destaque">- EXEMPLOS DE MANIPULAÇÃO DOM</span>:
+    <pre>
+        &lt;script&gt;
+            window.document.write('- EXEMPLOS DE MANIPULAÇÃO DOM &lt;br&gt;')
+            window.document.write('O Charset do documento é: '+ window.document.charset +'&lt;br&gt;');
+            window.document.write('O navegador usado é o: ' + window.navigator.appName + '&lt;br&gt;');
+            window.document.write('Minha URL é: ' + window.document.URL +'&lt;br&gt;')
+        &lt;/script&gt;
+    </pre>
+                </p>
+                <p>
+                    Existem muitas maneiras de selecionar os elementos para navegar dentro da árvore DOM: <br>
+                    <ul>
+                        <li>Por <span class="destaque">Marca</span>: usamos para isso uma TagName <code class="destaque">getElementsByTagName()</code>. Usando esta tag é possível selecionar mais de um elemento (dois parágrafos, por exemplo).
+                            <P>Como foram exibidas as informações apresentadas no <span class="destaque">- USANDO TAGNAME</span>:
+<pre>
+    &lt;div&gt;
+        &lt;h2&gt;Exercícios do Professor Guanabara&lt;/h2&gt;
+        &lt;p&gt;Aqui vai o resultado!&lt;/p&gt;
+        &lt;p&gt;Aprendendo a usar o &lt;strong&gt;DOM&lt;/strong&gt; em JavaScript.&lt;/p&gt;
+        &lt;div&gt;Clique em mim&lt;/div&gt;
+        &lt;script&gt;
+            var p1=window.document.getElementsByTagName('p') [1]
+            window.document.write('Está escrito assim: '+ p1.innerText) //se usar innerHTML trás a formatação original
+            p1.style.color = 'blue' //altera a cor do parágrafo original
+        &lt;/script&gt;
+    &lt;/div&gt;
+</pre>
+                            </P>
+                        </li>
+                        <li>Por <span class="destaque">ID</span>: 
+                            <P>
+<pre>
+    &lt;div&gt;
+        &lt;h2&gt;Exercícios do Professor Guanabara&lt;/h2&gt;
+        &lt;div id="msg"&gt;Usando ID&lt;/div&gt;
+        &lt;script&gt;
+            var d = window.document.getElementById('msg')
+            d.innerText='Estou alterando o texto original...' //Usado para mudar o texto original.
+            window.document.getElementById('msg').innerText='Estou alterando o texto original...' //mesmo comando anterior.
+        &lt;/script&gt;
+    &lt;/div&gt;
+</pre>
+                            </P>
+                        </li>
+                        <li>Por <span class="destaque">Name</span>:
+                            <P>
+<pre>
+    &lt;div&gt;
+        &lt;h2&gt;Exercícios do Professor Guanabara&lt;/h2&gt;
+        &lt;div name="msg"&gt;Usando NAME&lt;/div&gt;
+        &lt;script&gt;
+            var d = window.document.getElementsByName('msg')[0]
+        &lt;/script&gt;
+    &lt;/div&gt;
+</pre>
+                            </P>
+                        </li>
+                        <li>Por <span class="destaque">Classe</span>:
+                            <P>
+<pre>
+    &lt;div&gt;
+        &lt;h2&gt;Exercícios do Professor Guanabara&lt;/h2&gt;
+        &lt;div class="msg"&gt;Usando CLASSE&lt;/div&gt;
+        &lt;script&gt;
+            var d = window.document.getElementsByClassName('msg')[0]
+        &lt;/script&gt;
+    &lt;/div&gt;
+</pre>
+                            </P>
+                        </li>
+                        <li>Por <span class="destaque">Seletor</span>:
+                            <P> Essa forma de selecionar elementos é a mais nova e é a mais indicada. Usamos para isso o <code class="destaque">querySelector()</code> e <code class="destaque">querySelectorAll()</code>
+<pre>
+    &lt;div&gt;
+        &lt;h2&gt;Exercícios do Professor Guanabara&lt;/h2&gt;
+        &lt;div class="msg"&gt;Usando SELETOR&lt;/div&gt;
+        &lt;script&gt;
+            var d = window.document.querySelectorAll('div.msg')
+            d.style.color='green'
+        &lt;/script&gt;
+    &lt;/div&gt;
+</pre>
+                            </P>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div> 
+         
+    </div>
+    <a class="voltarLink" href="index-aulas.html"><img class="voltarImg" src="img/voltar2.png" alt="voltar">Home</a>
+</body>
+</html>

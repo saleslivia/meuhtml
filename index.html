@@ -1,140 +1,607 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache" />
-    <!--<meta http-equiv="refresh" content="30">-->
-    <meta name="description" content="Primeiros passos em HTML, CSS e JavaScript">
-    <link rel="shortcut icon" href="html.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Tenor+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&family=Tenor+Sans&display=swap" rel="stylesheet">  
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=New+Tegomin&family=Tenor+Sans&display=swap" rel="stylesheet">
-    <title>Bora estudar!</title>
-    <!--<link rel="stylesheet" type="text/css" href="_css/stylev3.css?v=<?php echo DateTime('d/m/y H:i:s'); ?>">-->
-    <!--<link rel="stylesheet" href="http://qidaora.com.br/meuhtml/assets/css/style.css">-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    </style>
-</head>
-<body class="homePrimary">
-    <header class="header">
-        <div class="cabecalho">
-            <h1 class="titlePrimary">Guia de estudos - Desenvolvimento</h1>
-        </div>
-        <div class="indice">
-            <ul class="menu">
-                <li class="modulo w40">Aulas
-                    <ul>
-                        <li class="modulo w40">HTML
-                            <a class="subMenu" href="1-internet.html">MÓDULO 1: Como a Internet chega na minha casa?</a>
-                            <a class="subMenu" href="2-descricao.html">MÓDULO 1: HTML, CSS e JavaScript</a>
-                            <a class="subMenu" href="3-tags.html">MÓDULO 1: Principais TAG's em HTML</a>
-                            <a class="subMenu" href="4-midias.html">MÓDULO 1: Imagens, Vídeo e Áudio </a>
-                            <a class="subMenu" href="5-tabelas.html">MÓDULO 1: Tabelas em HTML</a>
-                            <a class="subMenu" href="6-formularios.html">MÓDULO 1: Formulários em HTML</a>
-                            <a class="subMenu" href="7-semantico.html">MÓDULO 1: HTML Semântico </a>
-                        </li>
-                        <li class="modulo w40">CSS
-                            <a class="subMenu" href="8-css_introducao.html">MÓDULO 2: CSS - Cascading Style Sheets </a>
-                            <a class="subMenu" href="9-css_boxModel.html">MÓDULO 2: CSS - Box Model </a>
-                            <a class="subMenu" href="10-css_posicionamento.html">MÓDULO 2: CSS - Posicionamento </a>
-                            <a class="subMenu" href="11-css_flexbox.html">MÓDULO 2: CSS - Flexbox</a>
-                            <a class="subMenu" href="12-css_pseudoclasses.html">MÓDULO 2: CSS - Pseudo Classes</a>
-                            <a class="subMenu" href="13-css_mediaQueries.html">MÓDULO 2: CSS - Media Queries</a>
-                        </li>
-                        <li class="modulo w40">JavaScript
-                            <a class="subMenu" href="15-JavaScript.html">Principais comandos em JavaScript</a>
-                            <a class="subMenu" href="16-JavaScript-Dom.html">DOM - Document Object Model</a>
-                            <a class="subMenu" href="17-JavaScript-Condicionais.html">Condições em JavaScript</a>
-                        </li>
-                        <li class="modulo w40">GIT e GITHUB
-                            <a class="subMenu" href="14M2-gitGithub.html">MÓDULO 4: GIT e GitHub</a>
-                        </li>
-                    </ul>  
-                </li>
-                <li class="exercicio w40">Exercícios
-                        <a class="subMenu" href="exercicios/exe06.html">EXE 01: Hierarquia de Títulos e endereço</a>
-                        <a class="subMenu" href="exercicios/exe08.html">EXE 02: TAG's</a>
-                        <a class="subMenu" href="exercicios/exe09.html">EXE 03: Listas em HTML</a>
-                        <a class="subMenu" href="exercicios/EXE010/exe10.html">EXE 04: Trabalhando com links</a>
-                        <a class="subMenu" href="exercicios/EXE011/exe11.html">EXE 05: Trabalhando com Imagens Dinâmicas</a>
-                        <a class="subMenu" href="exercicios/EXE012/exe12.html">EXE 06: Inserindo Áudio e Vídeo na sua página</a>
-                        <a class="subMenu" href="exercicios/EXE_DEVMEDIA/exe01.html">EXE 07: Formulários</a>
-                        <a class="subMenu" href="exercicios/EXE_DEVMEDIA/exe02.html">EXE 08: Menu com Flex-Grow</a>
-                        <a class="subMenu" href="exercicios/EXE_DEVMEDIA/exe03.html">EXE 09: Tela de login com Flexbox e Media Queries</a>
-                        <a class="subMenu" href="exercicios/EXE022/exe22.html">EXE 10: Colocando uma imagem de fundo no seu site</a>
-                        <a class="subMenu" href="exercicios/exe14.html">EXE 11: Trabalhando com Tabelas</a>
-                        <a class="subMenu" href="exercicios/exe12JavaScript.html">EXE 11: Primeiro programa em JavaScript</a>
-                        <a class="subMenu" href="exercicios/exe13JavaScript.html">EXE 12: usando o Window.prompt</a>
-                        <a class="subMenu" href="exercicios/exe14JavaScript.html">EXE 13: usando o document.write/writeln</a>
-                        <a class="subMenu" href="exercicios/exe15.js">EXE 14: Exercícios em JavaScript</a>
-                        <a class="subMenu" href="exercicios/exe15JavaScript.html">EXE 15: Vários exercícios usando Condição em JavaScript</a>
-                        <a class="subMenu" href="exercicios/EXE16/exe16JavaScript.html">EXE 16: Saudações de acordo com o horário do computador</a>
-                        <a class="subMenu" href="#">*EXE 01: Trabalhando com cores</a>
-                </li>
-                <li class="desafio w40">Desafios
-                    <a class="subMenu" href="desafios/desafio1.html">DESAFIO 1: Desafio das Mensagens</a>
-                    <a class="subMenu" href="desafios/desafio2.html">DESAFIO 2: Desafio das Imagens</a>
-                    <a class="subMenu" href="desafios/desafio3.html">DESAFIO 3: Desafio Mapa Mundi</a>
-                    <a class="subMenu" href="desafios/desafio4.html">DESAFIO 4: Meus Emojis</a>
-                    <a class="subMenu" href="desafios/desafio5/desafio5.html">DESAFIO 5 e 6: Rede social</a>
-                    <a class="subMenu" href="desafios/desafio7/desafio7.html">DESAFIO 7: Imagem Flexível</a>
-                    <a class="subMenu" href="desafios/desafio8/desafio8.html">DESAFIO 8: Navegação</a>
-                    <a class="subMenu" href="desafios/desafio9/desafio9.html">DESAFIO 9: Incorporando Vídeos</a>
-                    <a class="subMenu" href="desafios/desafiohtml/desafioHtml.html">DESAFIO 10: Criando uma página completa</a>
-                    <a class="subMenu" href="desafios/desafiocss11/index.html" target="_blank">DESAFIO 11: Layout Responsivo</a>
-                    <a class="subMenu" href="desafios/desafio12/index.html" target="_blank">DESAFIO 12: Pousada Secreta</a>
-                    <a class="subMenu" href="desafios/desafio13/index.html" target="_blank">DESAFIO 13: Clínica Médica</a>
-                    <a class="subMenu" href="desafios/desafio14/index.html" target="_blank">DESAFIO 14: Curiosidades de Tecnologia</a>
-                    <a class="subMenu" href="desafios/devmedia/index.html" target="_blank">DESAFIO 15: Devmedia</a>
-                    <a class="subMenu" href="desafios/desafio16/index.html" target="_blank">DESAFIO 16: Projeto Cordel - Curso em Vídeo</a>
-                    <a class="subMenu" href="desafios/desafio17.html" target="_blank">DESAFIO 17: Mesclagem em tabelas</a>
-                    <a class="subMenu" href="desafios/nossoTreinamento/index.php" target="_blank">DESAFIO 18: Treinamento</a>
-                </li>
-                <li class="extra w40">Extras
-                    <a class="subMenu" href="extra/bootcamp/index.html">DIO bootcamps</a>
-                    <a class="subMenu" href="extra/loginChr/index.html" target="_blank">PROJETO 1 - Tela de Login 1</a>
-                    <a class="subMenu" href="extra/loginChr2/index.html" target="_blank">PROJETO 2 - Tela de Login 2</a>
-                    <a class="subMenu" href="extra/blog/blog.html" target="_blank">PROJETO 3 - Blog</a>
-                    <a class="subMenu" href="#">*Tela de Login</a>
-                    <a class="subMenu" href="#">*Tela de Login</a>
-                </li>
-                <li class="seliga w40">Se liga!
-                    <a class="subMenu" href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ" target="_blank" rel="external">Gustavo Guanabara/Curso em Vídeo</a>
-                    <a class="subMenu" href="https://dev.w3.org/html5/pf-summary/obsolete.html" target="_blank" rel="external">TAG's obsoletar em HTML</a>
-                    <a class="subMenu" href="https://developers.google.com/search/docs/advanced/crawling/special-tags?hl=pt-br" target="_blank" rel="external">Tags especiais que o Google processa</a>
-                    <a class="subMenu" href="https://youtu.be/BNHR6IQJGZs" target="_blank" rel="external">Como funciona o Google</a>
-                    <a class="subMenu" href="https://www.iana.org/assignments/media-types/media-types.xhtml">Principais Media Types</a>
-                    <a class="subMenu" href="http://qidaora.com.br/index.php" target="_blank"><strong>qidaora.com.br</strong></a>
-                    <a class="subMenu" href="http://bembugado.com.br/meuhtml/index.html" target="_blank"><strong>bembugado.com.br</strong></a>
-                    <a class="subMenu" href="bb.html">BB</a>
-                    <a class="subMenu" href="#">*Tipografia</a>
-                    <a class="subMenu" href="#">*Guia de Cores</a>
-                    <a class="subMenu" href="#">*Consulte a documentação de HTML</a>
-                </li>
-                <li></li>
-                
-            </ul>
-        </div>
-    </header>
-    <footer>
-        <div class="socialMedia">
-            <ul class="listSocialMedia">
-                <li>
-                    <img src="img/icone-linkedin.png" alt="Linkedin"> <a class="linkSocialMedia" href="https://www.linkedin.com/in/liviasales/" target="_blank">/liviasales</a> - Me adiciona no Linkedin
-                </li>
-                <li>
-                    <img src="img/icone-instagram.png" alt="Instagram"> <a class="linkSocialMedia" href="https://www.instagram.com/livisales" target="_blank">/livisales</a> - Me segue no Instagram
-                </li>
-                <li class="copy">
-                    &copy; Eu!SempreLinda
-                </li>
-            </ul>
-        </div>
-    </footer>
-</body>
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>LiviaSales</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Um pouco sobre mim e sobre o que eu faço." />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400, 900" rel="stylesheet"> -->
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Themify Icons-->
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/habilidade_1.css">
+	<link rel="stylesheet" href="css/habilidade_2.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<link rel="shortcut icon" href="images/html.ico" type="image/x-icon">
+	</head>
+	<body>
+		
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+	<nav class="gtco-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2 col-xs-12">
+					<div id="gtco-logo"><a href="index.html">Lívia<em>Sales</em></a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1 main-nav">
+					<ul>
+						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#" data-nav-section="about">Sobre</a></li>
+						<li><a href="#" data-nav-section="projects"><span>Projetos</span></a></li>
+						<li><a href="#" data-nav-section="experience">Experiência</a></li>
+						<li><a href="#" data-nav-section="learn"><span>Estudos</span></a></li>
+						<li><a href="#" data-nav-section="practice-areas">Habilidades</a></li>
+						<li><a href="#" data-nav-section="curiosities"><span>Curiosidades</span></a></li>
+						<li class="btn-cta"><a href="#" data-nav-section="contact"><span>Contato</span></a></li>
+						<!-- For external page link -->
+						<li><a href="#" class="external">External</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/capa-3.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center">
+					<div class="display-t">
+						<div class="display-tc">
+							<h1 class="animate-box" data-animate-effect="fadeIn">Um pouco sobre mim e sobre o que eu faço</h1>
+							<!-- <p class="gtco-video-link animate-box" data-animate-effect="fadeIn"><a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-controller-play"></i></a></p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<hr>	
+	<section id="gtco-about" data-section="about">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<h1>Para hoje</h1>
+					<p class="sub">Mesmo que ninguém veja, faça sempre o seu melhor!</p>
+					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Welcome</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
+					<div class="img-shadow">
+						<img src="images/liviaSales.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+					</div>
+				</div>
+				<div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
+					<h2 class="heading-colored">Um pouco sobre mim</h2>
+					<p>Sou uma profissional apaixonada pela minha profissão, dinâmica, dedicada, comprometida e responsável. Estou sempre me atualizando, buscando novas metodologias e tecnologias, para aplicar sempre as melhores soluções para os desafios enfrentados, buscando evolução, qualidade e entrega de melhores resultados. <br>
+					Por entender que a relação interpessoal é essencial para um bom convívio e crescimento profissional e pessoal, busco desenvolver habilidades para lidar com problemas, gerir e alinhar equipes e processos. <br>
+					Adoro maratonar séries e filmes, me desafiar com cubos mágicos e alguns jogos, viajar com amigos e estar em família!
+					</p>
+					<p><a href="assets/perfil_comportamental_livia-sales.pdf" target="_blank" class="read-more">Saiba mais <i class="icon-chevron-right"></i></a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+<hr>
+	<section id="gtco-projects" data-section="projects">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<h1>Projetos</h1>
+					<p class="sub">Este espaço mostra um pouco sobre minha evolução na área de Desenvolvimento de Software, desde um simples "Hello World", até projetos mais elaborado e complexos. Ainda vão aparecer muitas coisas por aqui, estou começando minha caminhada neste mundo novo!</p>
+					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Projects</p>
+				</div>
+			</div>
+			<div class="row projects-item gtco-teaprojectsm-reverse">
+				<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
+					<div class="img-shadow">
+						<img src="images/dev.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+					</div>
+				</div>
+				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
+					<h2>Desenvolvimento</h2>
+					<p>
+						O desenvolvimento de software é uma área do setor de TI que permite elaborar e implementar um sistema computacional, transformando a necessidade ou o problema de um cliente em uma solução eficaz e eficiente.
+						<br>
+						É um processo complexo que envolve profissionais, estratégia e etapas indispensáveis para o bom resultado da aplicação.
+					</p>
+					<p>
+						O desenvolvedor de software é integrante do dia a dia de qualquer pessoa, seja na vida pessoal, seja no trabalho. Rotinas cotidianas são automatizadas ou facilitadas por meio de aplicativos, ferramentas, programas etc.
+						<br>
+						São profissionais que precisam entender a regra de negócio, seja de qual ramo for, e propor soluções criativas, viáveis e colaborativas. Precisam estar em evolução contínua, buscando novas tecnologias e novas metodologias para propor soluções que simplifiquem o dia a dia de clientes e empresas, permitindo que possam focar em seus negócios. 
+					</p>
+					<p>
+					<p><a href="desafios\index-desafios.html" class="read-more btn btn-primary btn-cta">Veja meus projetos! <i class="icon-chevron-right"></i></a></p>
+				</div>
+			</div>
+
+			<div class="row team-item gtco-team">
+				<div class="col-md-6 col-md-pull-1 animate-box"  data-animate-effect="fadeInLeft">
+					<div class="img-shadow">
+						<img src="images/dev-2.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+					</div>
+				</div>
+				<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+					<h2>Estudos</h2>
+					<blockquote>
+						<cite>
+							“Lembre-se que as pessoas podem tirar tudo de você, menos o seu conhecimento.” 
+						</cite>
+						<br>
+						Albert Einstein
+					</blockquote>
+					<p>
+						Lema: <strong><em>“Eu posso não saber fazer (ainda), mas eu sei aprender!”</em> </strong><br>
+						A busca constante por conhecimento pode levar uma pessoa a se conhecer melhor, se desafiar, desenvolver novas habilidades, evoluir e construir meios que podem contribuir consigo mesmo e com o mundo. <br>
+						Há diversos motivos para investir em conhecimento e adquirir capital intelectual, como sucesso profissional, desenvolvimento pessoal e de senso crítico, maior preparação para enfrentar, encarar e adaptar-se às mudanças do mundo e contribuição com a sociedade. Conhecimento e educação são agentes transformadores, estimulantes e libertadores.
+						</p>
+					<p><a href="aulas\index-aulas.html" class="read-more  btn btn-primary">Veja minhas aulas <i class="icon-chevron-right"></i></a></p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+<hr>
+	<section id="gtco-experience" data-section="experience">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<h1>Experiência</h1>
+					<p class="sub">Essa é minha trajetória no mercado de trabalho, um pouco da minha vivência de profissional na prática.</p>
+					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Expe<span>rience</span></p>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-6">
+					<div class="gtco-experience-item animate-box">
+						<div class="gtco-icon">
+							<img src="images/chromos.jpeg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						</div>
+						<div class="gtco-copy">
+							<h3>Rede Chromos de Ensino</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. tellus finibus diam, eget ornare tortor leo eget erat.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="gtco-experience-item animate-box">
+						<div class="gtco-icon">
+							
+						</div>
+						<div class="gtco-copy">
+							<h4>Principais responsabilidades</h4>
+							<p>
+								<ul>
+									<li>#</li>
+									<li>#</li>
+									<li>#</li>
+									<li>#</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div> 
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="gtco-experience-item animate-box">
+						<div class="gtco-icon">
+							<img src="images/suprema.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						</div>
+						<div class="gtco-copy">
+							<h3>Suprema Informática</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. tellus finibus diam, eget ornare tortor leo eget erat.</p>
+							<p>
+								
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="gtco-experience-item animate-box">
+						<div class="gtco-icon">
+							
+						</div>
+						<div class="gtco-copy">
+							<h4>Principais responsabilidades</h4>
+							<p>
+								<ul>
+									<li>#</li>
+									<li>#</li>
+									<li>#</li>
+									<li>#</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div> 
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="gtco-experience-item animate-box">
+						<div class="gtco-icon">
+							<img src="images/agricad.jpg" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+						</div>
+						<div class="gtco-copy">
+							<h3>Agricad</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed scelerisque sapien. Sed sodales, libero non faucibus rutrum, purus tellus finibus diam, eget ornare tortor leo eget erat. tellus finibus diam, eget ornare tortor leo eget erat.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="gtco-experience-item animate-box">
+						<div class="gtco-icon">
+							
+						</div>
+						<div class="gtco-copy">
+							<h4>Principais responsabilidades</h4>
+							<p>
+								<ul>
+									<li>#</li>
+									<li>#</li>
+									<li>#</li>
+									<li>#</li>
+								</ul>
+							</p>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</section>
+<hr>
+	<section id="gtco-learn" data-section="learn">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<h1>Formação</h1>
+					<p class="sub">
+						<blockquote>
+							<cite>
+								“Comece onde você está, use o que você tem e faça o que você pode!” 
+							</cite>
+							<br>
+							Arthur Ashe
+						</blockquote>
+					</p>
+					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Learn</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 col-md-pull-1 animate-box" data-animate-effect="fadeInLeft">
+					<div class="img-shadow">
+						<img src="images/estudos.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+					</div>
+				</div>
+				<div class="col-md-7 animate-box" data-animate-effect="fadeInLeft">
+					<h2>Um pouco sobre meus estudos</h2>
+					<p>
+						<ul>
+							<li><strong>Formação:</strong>
+								<ul>
+									<li>Bacharel em Sistemas de Informação - PUC Minas</li>
+									<li>Pós Graduação em Gestão de Redes e Segurança de Sistemas</li>
+								</ul>
+							</li>
+							<br>
+							<li><strong>Certificação:</strong>
+									<ul>
+										<li>ITIL 4 Foundation - AXELOS Global Best Practice</li>
+										<li>SCRUM FOUNDATION PROFESSIONAL CERTIFICATE (SFPC) - CertiProf</li>
+										<li>Lifelong Learning - CertiProf</li>
+									</ul>
+							</li>
+							<br>
+							<li><strong>Carreira de Formação:</strong>
+									<ul>
+										<li>HTML</li>
+										<li>CSS</li>
+										<li>JavaScript</li>
+										<li>PHP</li>
+										<li>MySQL</li>
+										<li>SQL Server</li>
+									</ul>
+							</li>
+							<br>
+							<li><strong>Cursos livres:</strong>
+									<li>Alinhamento de TI Ao Negócio: Estratégias e Desenho de Serviços - Alura</li>
+									<li>SCRUM: Agilidade em seu projeto</li>
+									<li>LÓGICA DE PROGRAMAÇÃO II: Os primeiros programas com JavaScript e HTML - Alura</li>
+									<li>PNL: Comunicação efetiva para o dia a dia - Alura</li>
+									<li>GERENCIAMENTO DE SERVIÇOS: Papéis e processos de infraestrutura de TI - Alura</li>
+									<li>Marketing Digital - Alura</li>
+							</li>
+						</ul>
+					</p>
+					<p><a href="assets/Curriculo_Livia_Sales.pdf" target="_blank" class=" read-more">Acesse meu CV <i class="icon-chevron-right"></i></a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+<hr>
+<section id="gtco-practice-areas" data-section="practice-areas">
+	<div class="container">
+		<div class="row row-pb-md">
+			<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+				<h1>Habilidades</h1>
+				<p class="sub">
+					<blockquote>
+						<cite>
+							“Faça o teu melhor, na condição que você tem, enquanto você não tem condições melhores, para fazer melhor ainda!” 
+						</cite>
+						<br>
+						Mario Sergio Cortella
+					</blockquote>
+				</p>
+				<p class="subtle-text animate-box" data-animate-effect="fadeIn">Habi <span>lidades</span></p>
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-sm-12 col-md-6">
+				<div class="mh-skills-inner">
+					<div class="mh-professional-skill wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.3s; animation-name: fadeInUp;">
+						<h3>Technical Skills</h3>
+						<div class="each-skills">
+							<div class="candidatos">
+								<div class="parcial">
+									<div class="info">
+										<div class="nome">HTML</div>
+										<div class="percentagem-num">89%</div>
+									</div>
+									<div class="progressBar">
+										<div class="percentagem" style="width: 89%;"></div>
+									</div>
+								</div>
+							</div>
+							<div class="candidatos">
+								<div class="parcial">
+									<div class="info">
+										<div class="nome">CSS</div>
+										<div class="percentagem-num">81%</div>
+									</div>
+									<div class="progressBar">
+										<div class="percentagem" style="width: 81%;"></div>
+									</div>
+								</div>
+							</div>
+							<div class="candidatos">
+								<div class="parcial">
+									<div class="info">
+										<div class="nome">JavaScript</div>
+										<div class="percentagem-num">51%</div>
+									</div>
+									<div class="progressBar">
+										<div class="percentagem" style="width: 38%;"></div>
+									</div>
+								</div>
+							</div>
+							<div class="candidatos">
+								<div class="parcial">
+									<div class="info">
+										<div class="nome">PHP</div>
+										<div class="percentagem-num">35%</div>
+									</div>
+									<div class="progressBar">
+										<div class="percentagem" style="width: 35%;"></div>
+									</div>
+								</div>
+							</div>                                    
+							
+							<div class="candidatos">
+								<div class="parcial">
+									<div class="info">
+										<div class="nome">Python</div>
+										<div class="percentagem-num">09%</div>
+									</div>
+									<div class="progressBar">
+										<div class="percentagem" style="width: 9%;"></div>
+									</div>
+								</div>
+							</div>
+							<div class="candidatos">
+								<div class="parcial">
+									<div class="info">
+										<div class="nome">React</div>
+										<div class="percentagem-num">08%</div>
+									</div>
+									<div class="progressBar">
+										<div class="percentagem" style="width: 8%;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6">
+				<div class="mh-professional-skills wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: fadeInUp;">
+					<h3>Professional Skills</h3>
+					<ul class="mh-professional-progress">
+						<li>
+							<div class="mh-progress mh-progress-circle active" data-progress="95" style="position: relative;"><svg viewBox="0 0 100 100"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#555" stroke-width="5" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 14.9247;"></path></svg><p class="progressbar-text" style="position: absolute; top: 50%; left: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(85, 85, 85);">95%</p></div>
+							<div class="pr-skill-name">Communication</div>
+						</li>
+						<li>
+							<div class="mh-progress mh-progress-circle active" data-progress="85%" style="position: relative;"><svg viewBox="0 0 100 100"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#555" stroke-width="5" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 43.322;"></path></svg><p class="progressbar-text" style="position: absolute; top: 50%; left: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(85, 85, 85);">85%</p></div> 
+							<div class="pr-skill-name">Team Work</div>
+						</li>
+						<li>
+							<div class="mh-progress mh-progress-circle active" data-progress="78" style="position: relative;"><svg viewBox="0 0 100 100"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#555" stroke-width="5" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 70.789;"></path></svg><p class="progressbar-text" style="position: absolute; top: 50%; left: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(85, 85, 85);">78%</p></div>
+							<div class="pr-skill-name">Project Management</div>
+						</li> 
+						<li>
+							<div class="mh-progress mh-progress-circle active" data-progress="83" style="position: relative;"><svg viewBox="0 0 100 100"><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#eee" stroke-width="5" fill-opacity="0"></path><path d="M 50,50 m 0,-47.5 a 47.5,47.5 0 1 1 0,95 a 47.5,47.5 0 1 1 0,-95" stroke="#555" stroke-width="5" fill-opacity="0" style="stroke-dasharray: 298.493, 298.493; stroke-dashoffset: 50.397;"></path></svg><p class="progressbar-text" style="position: absolute; top: 50%; left: 50%; padding: 0px; margin: 0px; transform: translate(-50%, -50%); color: rgb(85, 85, 85);">83%</p></div>
+							<div class="pr-skill-name">Creativity</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<hr>
+	<section id="gtco-curiosities" data-section="curiosities">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<h1>Curiosidades</h1>
+					<p class="sub">
+						<blockquote>
+							<cite>Habilidade é o que você é capaz de fazer. Motivação determina o que você faz. Atitude determina a qualidade do que você faz.
+							</cite> <br>
+							Lou Holtz
+						</blockquote></p>
+					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Curio<span>sities</span></p>
+				</div>
+			</div>
+			<div class="row curiosities-item gtco-curiosities-reverse">
+				<div class="col-md-6 col-md-push-7 animate-box" data-animate-effect="fadeInRight">
+					<div class="img-shadow">
+						<img src="images/curiosidades-2.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+					</div>
+				</div>
+				<div class="col-md-6  col-md-pull-6 animate-box" data-animate-effect="fadeInRight">
+					<h2>Meus hobbies e interesses </h2>
+					<p>Oportunidades de se conhecer e conhecer novas habilidades traz uma série de benefícios.
+						A rotina e às vezes a sobrecarga de trabalho provoca esgotamento físico e mental que prejudica diretamente a nossa saúde. Para contrapor essa o stress, use seu tempo livre e aposte em atividades relaxantes para recarregar as energias de uma maneira prazerosa.
+						<!-- Cubo Mágico vinhos correr Xadrez séries e animes viajar cinuca quebra cabeça -->
+						</p>
+					<p><a href="#" class="read-more">Saiba mais <i class="icon-chevron-right"></i></a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+<hr>
+	<section id="gtco-contact" data-section="contact">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-8 col-md-offset-2 heading animate-box" data-animate-effect="fadeIn">
+					<h1>Contato</h1>
+					<p class="sub">Encontre-me através desses contatos:</p>
+					<p class="subtle-text animate-box" data-animate-effect="fadeIn">Contact</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-push-6 animate-box">
+					<form action="#">
+						<div class="form-group">
+							<label for="name" class="sr-only">Nome</label>
+							<input type="text" class="form-control" placeholder="Name" id="name">
+						</div>
+						<div class="form-group">
+							<label for="email" class="sr-only">E-mail</label>
+							<input type="text" class="form-control" placeholder="Email" id="email">
+						</div>
+						<div class="form-group">
+							<label for="message" class="sr-only">Menssagem</label>
+							<textarea name="message" id="message" class="form-control" cols="30" rows="7" placeholder="Message"></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Enviar Messagem" class=" disabled btn btn-primary">
+						</div>
+					</form>
+				</div>
+				<div class="col-md-4 col-md-pull-6 animate-box">
+					<div class="gtco-contact-info">
+						<ul>
+							<li class="address">Belo Horizonte/MG - Brasil</li>
+							<li class="phone"><a href="tel://33991192477">+ 55 33 99119-2477</a></li>
+							<li class="email"><a href="mailto:contato@liviasales.com.br">contato@liviasales.com.br</a></li>
+							<li class="url"><a href="#">http://liviasales.com.br</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<hr>
+	<footer id="gtco-footer" role="contentinfo">
+		<div class="container">
+			
+			<div class="row copyright">
+				<div class="col-md-12">
+					<p class="pull-left">
+						<small class="block">&copy; 2022 Livia Sales.</small>
+					</p>
+					<p class="pull-right">
+						<ul class="gtco-social-icons pull-right">
+							<li><a href="https://www.linkedin.com/in/liviasales/" target="_blank"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://github.com/saleslivia/" target="_blank"><i class="icon-github"></i></a></li>
+							<li><a href="https://www.instagram.com/livisales/" target="_blank"><i class="icon-instagram"></i></a></li>
+							<li><a href="https://twitter.com/livsalles" target="_blank"><i class="icon-twitter"></i></a></li>
+							<!-- <li><a href="#"><i class="icon-dribbble"></i></a></li> -->
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
 </html>
+

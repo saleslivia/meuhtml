@@ -1,0 +1,62 @@
+.homeSecond{
+    background-color: #f1f4f5d3;
+}
+.conteudo{
+    background-color: #dedee4ec;
+}
+h1.paginaInterna{
+    color: #124296;
+    font: bold 20pt;
+    font-family: 'New Tegomin', serif;
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: center;
+    background-color: #aec2e4e7;
+    box-shadow: 20px 10px 10px grey;
+    padding: 15px;
+    border-radius: 10px;
+
+}
+.imgInterna{
+    display: block; /*Centralizar a imagem*/
+    margin-left: auto;/*Centralizar a imagem*/
+    margin-right: auto;/*Centralizar a imagem*/
+    width: 300px;
+    right: 250px;
+}
+.conteudoInterno{
+    background-color: #1b1b1dec;
+    padding: 10px;
+    margin: 20px;
+    border: solid 1px #9e9898;
+    height: auto;
+    color: #fff;
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+}
+.ref{
+    font: 8pt Arial;
+    color: #7a7a7a;
+}
+.codigo{
+    background-color: #fff;
+    color: #000;
+    padding-top: 5px;
+    width: 700px;
+}
+.tag{
+    list-style-type: disc;
+}
+.sublista{
+    list-style-type: circle;
+}
+h3, h2{
+    color: #6086c9;
+}
+.voltar{
+    text-decoration: none;
+    vertical-align: middle;
+}
+span{
+    color: aquamarine; 
+    font-size: larger;
+}
